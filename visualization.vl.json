@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/FRED_inflation.csv"
+  },
+  "description": "FRED Data, USA Infation, yearly change",
+  "title": {
+    "text": "USA Inflation",
+    "subtitle": "CPI,yearly change. Source: FRED"
+  },
+  "mark": {"type": "bar", "strokeWidth": 3, "color": "#ea4d8c"},
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "axis": {"title": "", "grid": false}
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "axis": {"title": "", "grid": false}
+    }
+  },
+  "config": {}
+}
