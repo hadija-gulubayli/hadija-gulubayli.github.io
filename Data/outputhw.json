@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/series-091025.csv"
+  },
+  "description": "FRED Data, USA Infation, yearly change",
+  "title": {"text": "UK Output per Hour Worked", "subtitle": "Source: ONS"},
+  "mark": {"type": "bar", "strokeWidth": 3, "color": "#7f003f"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"title": "", "grid": false}
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": {"title": "", "grid": false}
+    }
+  },
+  "config": {}
+}
