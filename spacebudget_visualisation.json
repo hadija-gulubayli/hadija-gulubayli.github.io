@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {"year": "2021", "country": "United States", "budget": 54.59},
+      {"year": "2021", "country": "China", "budget": 10.29},
+      {"year": "2021", "country": "EU", "budget": 2.57},
+      {"year": "2022", "country": "United States", "budget": 61.97},
+      {"year": "2022", "country": "China", "budget": 11.94},
+      {"year": "2022", "country": "EU", "budget": 2.6},
+      {"year": "2023", "country": "United States", "budget": 73.2},
+      {"year": "2023", "country": "China", "budget": 14.15},
+      {"year": "2023", "country": "EU", "budget": 2.81},
+      {"year": "2024", "country": "United States", "budget": 79.68},
+      {"year": "2024", "country": "China", "budget": 19.89},
+      {"year": "2024", "country": "EU", "budget": 2.98}
+    ]
+  },
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year",
+      "sort": ["2021", "2022", "2023", "2024"]
+    },
+    "y": {
+      "field": "budget",
+      "type": "quantitative",
+      "title": "Space budget (USD billions)",
+      "axis": {"format": ".2f"}
+    },
+    "xOffset": {"field": "country"},
+    "color": {"field": "country", "title": "Country"},
+    "tooltip": [
+      {"field": "country", "title": "Country"},
+      {"field": "year", "title": "Year"},
+      {"field": "budget", "title": "Budget (USD bn)", "format": ".2f"}
+    ]
+  },
+  "width": 520,
+  "height": 360,
+  "title": "Government Expenditure on Space Programs (USD billions)",
+  "config": {}
+}
