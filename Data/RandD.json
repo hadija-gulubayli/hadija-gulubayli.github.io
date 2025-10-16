@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Google's stock price over time.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/RandD.csv"
+  },
+  "title": "Gross Private Domestic Investment — Research and Development (FRED)",
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Date", "type": "temporal"},
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "Billions of Dollars"
+    }
+  },
+  "config": {}
+}
