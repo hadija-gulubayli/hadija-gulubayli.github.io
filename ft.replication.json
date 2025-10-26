@@ -1,0 +1,102 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Replication of Financial Times chart: Gender pay gap underestimation.",
+  "background": "#fff1e5",
+  "width": 350,
+  "height": 300,
+  "data": {
+    "values": [
+      {"Year": 2004, "Category": "Official estimate", "Value": 14.5},
+      {
+        "Year": 2004,
+        "Category": "Impact of adjusting for response bias",
+        "Value": 1.5
+      },
+      {"Year": 2006, "Category": "Official estimate", "Value": 13.5},
+      {
+        "Year": 2006,
+        "Category": "Impact of adjusting for response bias",
+        "Value": 1
+      },
+      {"Year": 2008, "Category": "Official estimate", "Value": 13},
+      {
+        "Year": 2008,
+        "Category": "Impact of adjusting for response bias",
+        "Value": 1.5
+      },
+      {"Year": 2010, "Category": "Official estimate", "Value": 12.5},
+      {
+        "Year": 2010,
+        "Category": "Impact of adjusting for response bias",
+        "Value": 1.5
+      },
+      {"Year": 2012, "Category": "Official estimate", "Value": 10},
+      {
+        "Year": 2012,
+        "Category": "Impact of adjusting for response bias",
+        "Value": 1
+      },
+      {"Year": 2014, "Category": "Official estimate", "Value": 10.5},
+      {
+        "Year": 2014,
+        "Category": "Impact of adjusting for response bias",
+        "Value": 1
+      },
+      {"Year": 2016, "Category": "Official estimate", "Value": 10},
+      {
+        "Year": 2016,
+        "Category": "Impact of adjusting for response bias",
+        "Value": 1.2
+      },
+      {"Year": 2018, "Category": "Official estimate", "Value": 10.2},
+      {
+        "Year": 2018,
+        "Category": "Impact of adjusting for response bias",
+        "Value": 1.1
+      },
+      {"Year": 2020, "Category": "Official estimate", "Value": 11},
+      {
+        "Year": 2020,
+        "Category": "Impact of adjusting for response bias",
+        "Value": 1.3
+      },
+      {"Year": 2022, "Category": "Official estimate", "Value": 9},
+      {
+        "Year": 2022,
+        "Category": "Impact of adjusting for response bias",
+        "Value": 0.8
+      }
+    ]
+  },
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "",
+      "axis": {"labelAngle": 0, "labelPadding": 8}
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "stack": "zero",
+      "title": null
+    },
+    "color": {
+      "field": "Category",
+      "scale": {
+        "domain": [
+          "Official estimate",
+          "Impact of adjusting for response bias"
+        ],
+        "range": ["#0F5499", "#e96b85"]
+      },
+      "legend": null
+    },
+    "tooltip": [{"field": "Category"}, {"field": "Value"}]
+  },
+  "config": {
+    "axis": {"gridColor": "#d8cfc4", "gridDash": [2, 3], "labelFontSize": 12},
+    "view": {"stroke": "transparent"}
+  }
+}
