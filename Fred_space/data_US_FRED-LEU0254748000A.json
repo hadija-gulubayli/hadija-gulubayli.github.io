@@ -1,0 +1,88 @@
+{
+    "realtime_start": "2025-11-09",
+    "realtime_end": "2025-11-09",
+    "observation_start": "1600-01-01",
+    "observation_end": "9999-12-31",
+    "units": "lin",
+    "output_type": 1,
+    "file_type": "json",
+    "order_by": "observation_date",
+    "sort_order": "asc",
+    "count": 12,
+    "offset": 0,
+    "limit": 100000,
+    "observations": [
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2000-01-01",
+            "value": "1160"
+        },
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2001-01-01",
+            "value": "1173"
+        },
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2002-01-01",
+            "value": "1150"
+        },
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2003-01-01",
+            "value": "951"
+        },
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2004-01-01",
+            "value": "1408"
+        },
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2005-01-01",
+            "value": "751"
+        },
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2006-01-01",
+            "value": "1030"
+        },
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2007-01-01",
+            "value": "1071"
+        },
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2008-01-01",
+            "value": "472"
+        },
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2009-01-01",
+            "value": "1328"
+        },
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2010-01-01",
+            "value": "1850"
+        },
+        {
+            "realtime_start": "2025-11-09",
+            "realtime_end": "2025-11-09",
+            "date": "2011-01-01",
+            "value": "995"
+        }
+    ]
+}
