@@ -134,6 +134,15 @@
   <figure id="Location10"></figure>
   <p> Removed ticks and borders, lightened gridlines, added compact top-right legend, and improved spacing for a cleaner design.</p>
 </section>
+<figure id="Location11"></figure>
+<figure id="Location12"></figure>
+<figure id="Location13"></figure>
+<figure id="Location14"></figure>
+<figure id="Location15"></figure>
+<figure id="Location16"></figure>
+<section>
+  
+</section>
 
 
 
@@ -179,9 +188,92 @@
         // let figure_3_spec = ...
         // vegaEmbed('#Location3', figure_3_spec)
 
+       
+
 
     </script>
 
-</body>
+  <section class="section">
+  <div class="chart-description">
+    <h2> CC6: FRED SPACE LOOP </h2>
+  </div>
+  </section>
+
+
+  <script>
+
+  // 1. DEFINE TEMPLATE SPEC FOR CHART
+  let templateSpec = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+      "title": {
+          "text": "", // This is injected via code, added from the csv that we load above.
+          "subtitle": ["",""], // Added from csv
+          "anchor": "middle",
+          "color": "black"
+      },
+      "view": {"stroke": "transparent"}, // Make box around chart clear
+      "data":{
+          "url": "", // Added from loop, e.g. "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/data_US_FRED-CPIAUCSL.json"
+          "format":{
+              "type": "json",
+              "property": "observations"    // Tell Vega which json 'key' the data is in (else we will just see the metadata).
+          }},
+      "transform": [
+          {"calculate":"year(datum.date)", "as": "year"},
+          {"filter": "datum.year >= 2000"}
+      ],
+          
+      "height": 200,
+      "width": 200,
+      "mark": {"type": "line", "color": "#58b3c7", "interpolate": "basis"},
+      "encoding": {
+          "x":{"field": "date", "type": "temporal", "title": null, "axis": {"grid": false,}},
+          "y":{"field": "value", "type": "quantitative", "title": null, "axis": {"grid": false}}
+      }
+  }
+  let chartFiles = [
+    "Fred_space/data_US_FRED-LEU0254534400A.json",
+    "Fred_space/data_US_FRED-LEU0254694600A.json",
+    "Fred_space/data_US_FRED-LEU0254748000A.json",
+    "Fred_space/data_US_FRED-W595RC1A027NBEA.json",
+    "Fred_space/data_US_FRED-W595RG3A086NBEA.json",
+    "Fred_space/data_US_FRED-W595RZ2A224NBEA.json"
+  ];
+
+  let chartTitles =[
+    'Median weekly earnings',
+    'x',
+    'x',
+    'x',
+    'x',
+    'x',
+  ]
+
+  // use RAW, and ensure trailing slash
+  let baseUrl = "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/main/";
+
+
+  for (let i = 0; i < chartFiles.length; i++) {
+    // 1. Build raw github link
+    let url = baseUrl + chartFiles[i];
+    console.log(url)
+    // 2. Make a copy of chart template & replace URL & TITLE
+    let spec = JSON.parse(JSON.stringify(templateSpec));
+    spec.data = { url, format: { type: "json", property: "observations" } };
+    // spec.data.url = url
+    spec.title = spec.title || {};
+    // spec.title.text = chartFiles[i].split('-')[1].split('.')[0];
+    spec.title.text = chartFiles[i].split('-')[1].split('.')[0];
+    console.log(JSON.stringify(spec))
+
+    
+    let chartDiv = document.getElementById(`Location${i + 11}`);
+    console.log(`Location${i+11}`)
+    vegaEmbed(chartDiv, spec, { actions: false });
+  }
+</script>
+
+
+
     
 </html>
