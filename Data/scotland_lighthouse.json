@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Scottish Lighthouses (Range ≥ 15 nmi)",
+  "width": 350,
+  "height": 400,
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/scotland.geojson",
+        "format": {"property": "features"}
+      },
+      "projection": {"type": "mercator"},
+      "mark": {
+        "type": "geoshape",
+        "fill": "#005EB8",
+        "stroke": "white",
+        "strokeWidth": 0.1
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/lighthouse_15.csv"
+      },
+      "projection": {"type": "mercator"},
+      "mark": "circle",
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": 30,
+        "color": {"value": "white"},
+        "stroke": {"value": "black"},
+        "opacity": 1,
+        "tooltip": [
+          {"field": "name", "type": "nominal", "title": "Lighthouse"},
+          {"field": "range", "title": "Range"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
