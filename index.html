@@ -161,7 +161,8 @@
         let figure_9_spec = "ft.replication.json";
         let figure_10_spec = "remake.json";
         let figure_17_spec = "Data/welsh_speakers.json";
-        let figure_18_spec = "Data/scotland_lighthouse.json"
+        let figure_18_spec = "Data/scotland_lighthouse.json";
+        let figure_19_spec = "Data/butter.json"
 
         
         vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
@@ -177,6 +178,7 @@
         vegaEmbed('#Location10', figure_10_spec)
         vegaEmbed('#Location17', figure_17_spec)
         vegaEmbed('#Location18', figure_18_spec)
+        vegaEmbed('#Location19', figure_19_spec)
 
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
@@ -291,8 +293,12 @@
   </div>
 </section>
 
+<section>
+       <div class="chart-description">
+           <h2> CC8: Butter Prices </h2>
+  </div>
+  <figure id="Location19"></figure>
 
-
-
-    
+  </div>
+</section>
 </html>
