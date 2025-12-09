@@ -1,0 +1,93 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "UK House Prices",
+    "subtitle": "House Price Index by Property Type, Source: ONS",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/HPI.csv"
+  },
+  "view": {"stroke": "transparent"},
+  "params": [
+    {
+      "name": "yearMin",
+      "value": 2005,
+      "bind": {
+        "input": "range",
+        "min": 2005,
+        "max": 2024,
+        "step": 1,
+        "name": "Index Year: "
+      }
+    },
+    {
+      "name": "hover",
+      "select": {
+        "type": "point",
+        "fields": ["PropertyShort"],
+        "on": "mouseover",
+        "clear": "mouseout"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "fold": [
+        "House price index All property types",
+        "House price index Detached houses",
+        "House price index Semi-detached houses",
+        "House price index Terraced houses",
+        "House price index Flats and maisonettes"
+      ],
+      "as": ["PropertyType", "HPI"]
+    },
+    {
+      "calculate": "datum.PropertyType == 'House price index All property types' ? 'All Properties' : datum.PropertyType == 'House price index Detached houses' ? 'Detached Houses' : datum.PropertyType == 'House price index Semi-detached houses' ? 'Semi-Detached Houses' : datum.PropertyType == 'House price index Terraced houses' ? 'Terraced Houses' : datum.PropertyType == 'House price index Flats and maisonettes' ? 'Flats & Maisonettes' : datum.PropertyType",
+      "as": "PropertyShort"
+    },
+    {"calculate": "year(datum['Pivotable date'])", "as": "Year"},
+    {"filter": "datum.Year >= yearMin"}
+  ],
+  "mark": {"type": "line", "strokeWidth": 1.5},
+  "encoding": {
+    "x": {"field": "Pivotable date", "type": "temporal", "title": "Date"},
+    "y": {
+      "field": "HPI",
+      "type": "quantitative",
+      "title": "House price index",
+      "scale": {"zero": false}
+    },
+    "color": {
+      "field": "PropertyShort",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "All Properties",
+          "Detached Houses",
+          "Semi-Detached Houses",
+          "Terraced Houses",
+          "Flats & Maisonettes"
+        ],
+        "range": ["#e8b6e2", "#ffdbbb", "#44b8ff", "#978de1", "#aaaaaa"]
+      },
+      "title": "Property type"
+    },
+    "strokeWidth": {
+      "condition": {"param": "hover", "value": 2.5},
+      "value": 1.2
+    },
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.1},
+    "tooltip": [
+      {"field": "Pivotable date", "type": "temporal", "title": "Date"},
+      {"field": "PropertyShort", "type": "nominal", "title": "Property type"},
+      {
+        "field": "HPI",
+        "type": "quantitative",
+        "title": "Index",
+        "format": ".1f"
+      }
+    ]
+  },
+  "config": {}
+}
