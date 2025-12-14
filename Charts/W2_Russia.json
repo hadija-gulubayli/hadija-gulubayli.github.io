@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Unemployment Rate in Russia, 1999–2023",
+    "anchor": "start",
+    "subtitle": "Unemployment rate (% of labour force) | Source: Rosstat (via Economics Observatory)",
+    "fontSize": 14,
+    "subtitleFontSize": 12,
+    "color": "#000000",
+    "subtitleColor": "#000000"
+  },
+  "height": 250,
+  "width": 400,
+  "background": "#adebff",
+  "view": { "fill": "#ffffff", "strokeOpacity": 0 },
+  "data": {
+    "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.economicsobservatory.com%2Frus%2Funem%3Fvega",
+    "format": { "type": "json" }
+  },
+  "mark": { "type": "line", "color": "#008cb4", "strokeWidth": 2 },
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": { "title": null, "format": "%Y", "grid": false }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "axis": { "title": null, "grid": false }
+    }
+  }
+}
