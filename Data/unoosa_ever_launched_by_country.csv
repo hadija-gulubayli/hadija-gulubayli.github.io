@@ -1,0 +1,177 @@
+country,country_ever_launched,eu_bloc_total,soviet_bloc_total,global_total,iso3
+,1,168,0,22374,
+APSCO,1,168,0,22374,APSCO
+ARABSAT,8,168,0,22374,ARABSAT
+Algeria,6,168,0,22374,DZA
+Amsat Argentina,1,168,0,22374,ARG
+Amsat Brazil,1,168,0,22374,BRA
+Angola,2,168,0,22374,AGO
+Arabsat,3,168,0,22374,Arabsat
+Argentina,17,168,0,22374,ARG
+"Argentina, USA",2,168,0,22374,ARG
+Armenia,2,168,0,22374,ARM
+Australia,59,168,0,22374,AUS
+Austria,4,168,0,22374,AUT
+Azerbaijan,3,168,0,22374,AZE
+Bahrain,1,168,0,22374,BHR
+Bangladesh,2,168,0,22374,BGD
+Belarus,4,168,0,22374,BLR
+Belgium,43,168,0,22374,BEL
+Bhutan,1,168,0,22374,BTN
+Bolivia,1,168,0,22374,BOL
+Botswana,1,168,0,22374,BWA
+Brazil,43,168,0,22374,BRA
+"Brazil, China",2,168,0,22374,"['BRA', 'CHN']"
+Bulgaria,7,168,0,22374,BGR
+Canada,110,168,0,22374,CAN
+"Canada, USA",3,168,0,22374,CAN
+Chile,8,168,0,22374,CHL
+China,1512,168,0,22374,CHN
+"China, Brazil",2,168,0,22374,"['BRA', 'CHN']"
+"China, Venezuela",1,168,0,22374,"['CHN', 'VEN']"
+Colombia,3,168,0,22374,COL
+Costa Rica,1,168,0,22374,CRI
+Croatia,1,168,0,22374,HRV
+Czech Republic,10,168,0,22374,CZE
+Czechia,1,168,0,22374,CZE
+Czechoslovakia,3,168,0,22374,CZE
+Democratic People's Republic of Korea,3,168,0,22374,PRK
+Denmark,16,168,0,22374,DNK
+Djibouti,2,168,0,22374,DJI
+"ESA, EUMETSAT",1,168,0,22374,"ESA, EUMETSAT"
+"ESA, USA",2,168,0,22374,"ESA, USA"
+ESRO/ESA,1,168,0,22374,ESRO/ESA
+"EUMETSAT, ESA",1,168,0,22374,"EUMETSAT, ESA"
+Ecuador,2,168,0,22374,ECU
+Egypt,14,168,0,22374,EGY
+Estonia,4,168,0,22374,EST
+Ethiopia,1,168,0,22374,ETH
+Eumetsat,7,168,0,22374,Eumetsat
+European Space Agency,1,168,0,22374,European Space Agency
+European Union,168,168,0,22374,European Union
+Finland,31,168,0,22374,FIN
+France,186,168,0,22374,FRA
+"France, Germany",2,168,0,22374,"['FRA', 'DEU']"
+"France, USA",1,168,0,22374,FRA
+Germany,141,168,0,22374,DEU
+Germany & India,1,168,0,22374,"['DEU', 'IND']"
+"Germany, France",2,168,0,22374,"['FRA', 'DEU']"
+"Germany, USA",2,168,0,22374,DEU
+Ghana,1,168,0,22374,GHA
+Greece,5,168,0,22374,GRC
+Guatemala,1,168,0,22374,GTM
+Hungary,9,168,0,22374,HUN
+INTELSAT,2,168,0,22374,INTELSAT
+ISA,1,168,0,22374,ISA
+India,153,168,0,22374,IND
+"India, USA",2,168,0,22374,IND
+"India, USSR",2,168,0,22374,IND
+Indonesia,24,168,0,22374,IDN
+Intercosmos,4,168,0,22374,Intercosmos
+Intersputnik,1,168,0,22374,Intersputnik
+Iran,20,168,0,22374,IRN
+Ireland,1,168,0,22374,IRL
+Israel,51,168,0,22374,ISR
+Italy,101,168,0,22374,ITA
+"Italy, USA",1,168,0,22374,ITA
+Japan,360,168,0,22374,JPN
+Japan and Republic of Korea,1,168,0,22374,JPN
+Jordan,1,168,0,22374,JOR
+Kazakhstan,9,168,0,22374,KAZ
+Kenya,2,168,0,22374,KEN
+Kuwait,1,168,0,22374,KWT
+Lao People's Democratic Republic,1,168,0,22374,LAO
+Latvia,1,168,0,22374,LVA
+Lithuania,13,168,0,22374,LTU
+Luxembourg,98,168,0,22374,LUX
+"Luxembourg, United Kingdom",1,168,0,22374,"['LUX', 'GBR']"
+Malaysia,12,168,0,22374,MYS
+Mauritius,1,168,0,22374,MUS
+Mexico,18,168,0,22374,MEX
+"Mexico, United Kingdom",1,168,0,22374,"['MEX', 'GBR']"
+Monaco,1,168,0,22374,MCO
+Mongolia,13,168,0,22374,MNG
+Morocco,5,168,0,22374,MAR
+NATO,5,168,0,22374,NATO
+Nepal,1,168,0,22374,NPL
+Netherlands,5,168,0,22374,NLD
+New Zealand,27,168,0,22374,NZL
+Nigeria,4,168,0,22374,NGA
+Norway,25,168,0,22374,NOR
+Oman,1,168,0,22374,OMN
+Pakistan,9,168,0,22374,PAK
+Papua New Guinea,2,168,0,22374,PNG
+Paraguay,1,168,0,22374,PRY
+Peru,4,168,0,22374,PER
+Philippines,9,168,0,22374,PHL
+Poland,20,168,0,22374,POL
+Portugal,5,168,0,22374,PRT
+Qatar,1,168,0,22374,QAT
+RASCOM,2,168,0,22374,RASCOM
+Republic of Korea,72,168,0,22374,KOR
+Republic of Moldova,1,168,0,22374,MDA
+Romania,2,168,0,22374,ROU
+Russian Federation,3858,168,0,22374,RUS
+Russian Federation/Ukraine,1,168,0,22374,"['RUS', 'UKR']"
+Rwanda,7,168,0,22374,RWA
+Saudi Arabia,17,168,0,22374,SAU
+SeaLaunch,1,168,0,22374,SeaLaunch
+Senegal,1,168,0,22374,SEN
+Singapore,29,168,0,22374,SGP
+"Singapore, etc",1,168,0,22374,SGP
+Slovakia,4,168,0,22374,SVK
+Slovenia,3,168,0,22374,SVN
+Solomon Islands,1,168,0,22374,SLB
+South Africa,9,168,0,22374,ZAF
+Spain,82,168,0,22374,ESP
+Sri Lanka,1,168,0,22374,LKA
+Starsem,2,168,0,22374,Starsem
+Sweden,15,168,0,22374,SWE
+"Sweden, UK",1,168,0,22374,SWE
+"Sweden, USA",1,168,0,22374,SWE
+"Sweden, United Kingdom",1,168,0,22374,"['SWE', 'GBR']"
+Switzerland,24,168,0,22374,CHE
+Taiwan Province of China,26,168,0,22374,TWN
+"Taiwan, Province of China",1,168,0,22374,TWN
+Thailand,16,168,0,22374,THA
+The Netherlands,2,168,0,22374,NLD
+Tunisia,1,168,0,22374,TUN
+Turkey,1,168,0,22374,TUR
+Turkmenistan,1,168,0,22374,TKM
+Türkiye,43,168,0,22374,TUR
+UK,29,168,0,22374,GBR
+"UK ,USA",1,168,0,22374,"UK ,USA"
+"UK, Sweden",1,168,0,22374,SWE
+"UK, USA",2,168,0,22374,"UK, USA"
+US,3,168,0,22374,USA
+USA,13695,168,0,22374,USA
+USA [for Indonesia],1,168,0,22374,IDN
+USA [for Inmarsat],1,168,0,22374,USA [for Inmarsat]
+"USA, Argentina",1,168,0,22374,ARG
+"USA, Canada",3,168,0,22374,CAN
+"USA, ESA",2,168,0,22374,"USA, ESA"
+"USA, France",1,168,0,22374,FRA
+"USA, Germany",2,168,0,22374,DEU
+"USA, India",2,168,0,22374,IND
+"USA, Italy",1,168,0,22374,ITA
+"USA, Sweden",1,168,0,22374,SWE
+"USA, UK",3,168,0,22374,"USA, UK"
+USA. Argentina,1,168,0,22374,ARG
+Uganda,1,168,0,22374,UGA
+Ukraine,10,168,0,22374,UKR
+United Arab Emirates,30,168,0,22374,ARE
+United Kingdom,771,168,0,22374,GBR
+"United Kingdom, Luxembourg",1,168,0,22374,"['LUX', 'GBR']"
+"United Kingdom, Mexico",1,168,0,22374,"['MEX', 'GBR']"
+"United Kingdom, Sweden",1,168,0,22374,"['SWE', 'GBR']"
+Unknown,9,168,0,22374,Unknown
+Uruguay,50,168,0,22374,URY
+Venezuela,2,168,0,22374,VEN
+"Venezuela, China",1,168,0,22374,"['CHN', 'VEN']"
+Viet Nam,6,168,0,22374,VNM
+Zimbabwe,2,168,0,22374,ZWE
+for Amsat Germany,1,168,0,22374,DEU
+for Arabsat,3,168,0,22374,for Arabsat
+for Intelsat,1,168,0,22374,for Intelsat
+formerly Arabsat,1,168,0,22374,formerly Arabsat
+the Netherlands,10,168,0,22374,NLD
