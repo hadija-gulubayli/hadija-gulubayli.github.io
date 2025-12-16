@@ -1,0 +1,104 @@
+country,total_launches,active_launches,inactive_launches,iso3
+Algeria,6,6,0,DZA
+Angola,2,2,0,AGO
+Argentina,19,13,6,ARG
+Armenia,2,2,0,ARM
+Australia,59,42,17,AUS
+Austria,4,3,1,AUT
+Azerbaijan,3,3,0,AZE
+Bahrain,1,1,0,BHR
+Bangladesh,2,1,1,BGD
+Belarus,4,3,1,BLR
+Belgium,43,12,31,BEL
+Bhutan,1,0,1,BTN
+Bolivia,1,1,0,BOL
+Botswana,1,1,0,BWA
+Brazil,45,39,6,BRA
+Bulgaria,7,4,3,BGR
+Canada,113,78,35,CAN
+Chile,8,5,3,CHL
+China,1516,1332,184,CHN
+Colombia,3,2,1,COL
+Costa Rica,1,0,1,CRI
+Croatia,1,1,0,HRV
+Czechia,14,9,5,CZE
+Côte d'Ivoire,2,2,0,CIV
+Democratic People's Republic of Korea,3,1,2,PRK
+Denmark,16,9,7,DNK
+Djibouti,2,2,0,DJI
+Ecuador,2,2,0,ECU
+Egypt,14,13,1,EGY
+Estonia,4,4,0,EST
+Ethiopia,1,1,0,ETH
+Finland,31,27,4,FIN
+France,361,311,50,FRA
+Germany,158,121,37,DEU
+Ghana,1,0,1,GHA
+Greece,5,3,2,GRC
+Guatemala,1,0,1,GTM
+Hungary,9,5,4,HUN
+India,157,123,34,IND
+Indonesia,25,22,3,IDN
+Iran,20,13,7,IRN
+Ireland,1,1,0,IRL
+Israel,52,36,16,ISR
+Italy,103,78,25,ITA
+Japan,361,247,114,JPN
+Jordan,1,1,0,JOR
+Kazakhstan,9,9,0,KAZ
+Kenya,2,0,2,KEN
+Kuwait,1,1,0,KWT
+Lao People's Democratic Republic,1,1,0,LAO
+Latvia,1,0,1,LVA
+Lithuania,13,6,7,LTU
+Luxembourg,99,55,44,LUX
+Malaysia,12,10,2,MYS
+Mauritius,1,0,1,MUS
+Mexico,19,18,1,MEX
+Moldova,1,0,1,MDA
+Monaco,1,1,0,MCO
+Mongolia,13,12,1,MNG
+Morocco,5,5,0,MAR
+Nepal,1,0,1,NPL
+Netherlands,17,14,3,NLD
+New Zealand,27,2,25,NZL
+Nigeria,4,3,1,NGA
+Norway,25,24,1,NOR
+Oman,1,1,0,OMN
+Pakistan,9,8,1,PAK
+Papua New Guinea,2,2,0,PNG
+Paraguay,1,0,1,PRY
+Peru,4,3,1,PER
+Philippines,9,2,7,PHL
+Poland,20,8,12,POL
+Portugal,5,4,1,PRT
+Qatar,1,1,0,QAT
+Republic of Korea,72,65,7,KOR
+Romania,2,1,1,ROU
+Russian Federation,3864,1712,2152,RUS
+Rwanda,7,6,1,RWA
+Saudi Arabia,32,31,1,SAU
+Senegal,1,1,0,SEN
+Singapore,30,28,2,SGP
+Slovakia,4,2,2,SVK
+Slovenia,3,2,1,SVN
+Solomon Islands,1,1,0,SLB
+South Africa,9,5,4,ZAF
+Spain,82,54,28,ESP
+Sri Lanka,1,0,1,LKA
+Sweden,21,20,1,SWE
+Switzerland,25,22,3,CHE
+Taiwan,28,25,3,TWN
+Thailand,16,15,1,THA
+Tunisia,1,0,1,TUN
+Turkmenistan,1,1,0,TKM
+Türkiye,44,42,2,TUR
+Uganda,1,0,1,UGA
+Ukraine,10,7,3,UKR
+United Arab Emirates,30,20,10,ARE
+United Kingdom,806,781,25,GBR
+United States,13723,10448,3275,USA
+Uruguay,50,30,20,URY
+Venezuela,3,3,0,VEN
+Vietnam,6,3,3,VNM
+Zimbabwe,2,2,0,ZWE
