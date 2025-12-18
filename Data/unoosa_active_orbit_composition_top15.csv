@@ -1,0 +1,57 @@
+country,orbit_class,active_objects
+Australia,GEO,9
+Australia,LEO,9
+Australia,MEO,1
+Australia,Other,22
+Canada,GEO,23
+Canada,LEO,17
+Canada,MEO,6
+Canada,Other,23
+China,GEO,139
+China,LEO,316
+China,MEO,41
+China,Other,835
+France,GEO,62
+France,LEO,83
+France,MEO,3
+France,Other,148
+Germany,GEO,19
+Germany,LEO,50
+Germany,MEO,1
+Germany,Other,48
+India,GEO,49
+India,LEO,29
+India,MEO,2
+India,Other,43
+Italy,GEO,4
+Italy,LEO,24
+Italy,Other,49
+Japan,GEO,46
+Japan,LEO,96
+Japan,MEO,7
+Japan,Other,87
+Luxembourg,GEO,20
+Luxembourg,LEO,11
+Luxembourg,MEO,4
+Luxembourg,Other,20
+Republic of Korea,GEO,12
+Republic of Korea,LEO,17
+Republic of Korea,MEO,1
+Republic of Korea,Other,35
+Russian Federation,GEO,167
+Russian Federation,LEO,137
+Russian Federation,MEO,141
+Russian Federation,Other,866
+Spain,GEO,7
+Spain,LEO,16
+Spain,Other,30
+Türkiye,GEO,9
+Türkiye,LEO,20
+Türkiye,Other,13
+United Kingdom,GEO,44
+United Kingdom,LEO,702
+United Kingdom,MEO,1
+United Kingdom,Other,26
+United States,GEO,393
+United States,LEO,9406
+United States,Other,217
