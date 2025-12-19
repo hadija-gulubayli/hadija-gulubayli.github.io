@@ -1,0 +1,79 @@
+country,purpose_class,active_objects
+Australia,Communications,19
+Australia,ISS & Human Spaceflight,1
+Australia,Other,21
+Canada,Communications,20
+Canada,Earth Observation & Meteorology,3
+Canada,ISS & Human Spaceflight,13
+Canada,Navigation,7
+Canada,Other,16
+Canada,Science & Technology,10
+China,Communications,97
+China,Earth Observation & Meteorology,301
+China,ISS & Human Spaceflight,17
+China,Navigation,60
+China,Other,781
+China,Science & Technology,75
+France,Communications,92
+France,Earth Observation & Meteorology,17
+France,ISS & Human Spaceflight,33
+France,Navigation,2
+France,Other,141
+France,Science & Technology,11
+Germany,Communications,35
+Germany,Earth Observation & Meteorology,25
+Germany,ISS & Human Spaceflight,6
+Germany,Navigation,1
+Germany,Other,41
+Germany,Science & Technology,10
+India,Communications,43
+India,Earth Observation & Meteorology,25
+India,ISS & Human Spaceflight,2
+India,Navigation,9
+India,Other,36
+India,Science & Technology,8
+Italy,Communications,10
+Italy,Earth Observation & Meteorology,2
+Italy,ISS & Human Spaceflight,14
+Italy,Other,40
+Italy,Science & Technology,11
+Japan,Communications,60
+Japan,Earth Observation & Meteorology,25
+Japan,ISS & Human Spaceflight,46
+Japan,Navigation,6
+Japan,Other,67
+Japan,Science & Technology,32
+Luxembourg,Communications,10
+Luxembourg,ISS & Human Spaceflight,24
+Luxembourg,Navigation,4
+Luxembourg,Other,17
+Republic of Korea,Communications,13
+Republic of Korea,Earth Observation & Meteorology,9
+Republic of Korea,ISS & Human Spaceflight,3
+Republic of Korea,Navigation,2
+Republic of Korea,Other,26
+Republic of Korea,Science & Technology,12
+Russian Federation,Communications,102
+Russian Federation,Earth Observation & Meteorology,60
+Russian Federation,ISS & Human Spaceflight,105
+Russian Federation,Navigation,141
+Russian Federation,Other,879
+Russian Federation,Science & Technology,24
+Spain,Communications,10
+Spain,Earth Observation & Meteorology,7
+Spain,Other,31
+Spain,Science & Technology,5
+Türkiye,Communications,23
+Türkiye,Earth Observation & Meteorology,5
+Türkiye,Other,13
+Türkiye,Science & Technology,1
+United Kingdom,Communications,717
+United Kingdom,Earth Observation & Meteorology,8
+United Kingdom,ISS & Human Spaceflight,5
+United Kingdom,Navigation,1
+United Kingdom,Other,28
+United Kingdom,Science & Technology,14
+United States,Communications,9737
+United States,ISS & Human Spaceflight,1
+United States,Other,182
+United States,Science & Technology,96
