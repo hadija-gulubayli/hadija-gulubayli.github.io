@@ -3,13 +3,15 @@
 <html> 
  
 <head>    
- 
-    <link rel="stylesheet" type="text/css" href="portfolio.css">
-    <title> Hadija's Portfolio </title> 
+    
+    <link rel="stylesheet" href="base.css" />
+<link rel="stylesheet" href="portfolio.css" />
+<title> Hadija's Portfolio </title> 
 
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
 
     <style>
         #ChartGrid {
@@ -19,10 +21,28 @@
     </style>
 </head>
 
+
 <body> 
-    <h1 class="big" style="margin-bottom: 0px;"> 
-        PP434 Portfolio
-    </h1>
+
+<header class="ProjectHero">
+  <nav class="TopNav">
+    <a href="index.html">HOME</a>
+    <a class="active" href="portfolio.html">PORTFOLIO</a>
+    <a href="project.html">PROJECT</a>
+    <a href="https://github.com/hadija-gulubayli" target="_blank" rel="noopener">GITHUB</a>
+  </nav>
+
+  <div class="HeroContent">
+    <h1>Portfolio</h1>
+    <p class="HeroSub">
+      PP434 Automated Data Visualization Course, 2024<br>
+      Candidate Number: 39052
+    </p>
+  </div>
+</header>
+
+
+
     
   <!-- WEEK 1 -->
   <section>
@@ -86,73 +106,224 @@
         </div>
    </section>
 
+   <!-- WEEK 3 -->
 
+  <section>
+        <div class="ChartGrid">
+          
+          <div class="ChartCard">
+            <h2 class="WeekTitle"> Week 3: The Brexit Debate </h2>
 
- 
-<section class="section">
-  <div class="chart-description">
-    <h2>Week 3: Space & GDP per Capita</h2>
-    <p> Chart 1: National space investment. Tracking how the U.S., China, and the EU increased their budgets shows the strategic prioritisation of space as an economic driver. These spending patterns form the quantitative base for exploring how space technology investment stimulates innovation and, ultimately, GDP growth.</p>
+          <div class = "ChartFrame">
+            <figure id = "Location5"></figure>
+          </div>
+          
+          </div>
+        </div>
+        <p>
+
+        </p>
+  </section>
+
+  <section>
+        <div class="ChartGrid">
+          
+          <div class="ChartCard">
+            <h2 class="WeekTitle"> Week 3: The Brexit Debate </h2>
+
+          <div class = "ChartFrame">
+            <figure id = "Location6"></figure>
+          </div>
+          
+          </div>
+        </div>
+        <p>
+          
+        </p>
+  </section>
+
+  <!-- WEEK 4 -->
+<section>
+  <div class="ChartGrid">
+    <div class="ChartCard">
+      <h2 class="WeekTitle"> Week 4: The Economist Chart </h2>
+
+      <div class="ChartFrame">
+        <figure id="Location7">
+          <img 
+            src="/Charts/W4.png" 
+            alt="The Economist chart: US birth rates by age of mother"
+            class="ChartImage"
+          >
+        </figure>
+      </div>
+
+    </div>
   </div>
-
-  <!-- Chart container -->
-  <figure id="Location5"></figure>
 </section>
 
-<section class="section">
-  <div class="chart-description">
+  <!-- Replication -->
 
-    <p>Chart 2: Gross Private Domestic Investment. This chart shows rising U.S. private R&D investment, reflecting sustained innovation spending that complements government investment in space technology.</p>
+  <section>
+  <div class="ChartGrid">
+    <div class="ChartCard">
+      <h2 class="WeekTitle"> Week 4: The Replica </h2>
+
+      <div class="ChartFrame">
+        <figure id="Location8">
+        </figure>
+      </div>
+
+    </div>
   </div>
-
-  <!-- Chart container -->
-  <figure id="Location6"></figure>
 </section>
 
-<section class="section">
-  <div class="chart-description">
-    <h2>Week 3: Code Along </h2>
+<!-- Improvement -->
+<section>
+  <div class="ChartGrid6">
+    <div class="ChartCard"><figure id="Age15_19"></figure></div>
+    <div class="ChartCard"><figure id="Age20_24"></figure></div>
+    <div class="ChartCard"><figure id="Age25_29"></figure></div>
+    <div class="ChartCard"><figure id="Age30_34"></figure></div>
+    <div class="ChartCard"><figure id="Age35_39"></figure></div>
+    <div class="ChartCard"><figure id="Age40_44"></figure></div>
   </div>
-
-  <!-- Chart container -->
-  <figure id="Location7"></figure>
 </section>
 
-<section class="section">
-  <div class="chart-description">
-    <h2>Week 4: Live Chart </h2>
-  </div>
+<!-- WEEK 5 -->
 
-  <!-- Chart container -->
-  <figure id="Location8"></figure>
-</section>
+  <section>
+        <div class="ChartGrid">
+          
+          <div class="ChartCard">
+            <h2 class="WeekTitle"> Week 5: Live Chart </h2>
 
-<section class="section">
-  <div class="chart-description">
-    <h2>Week 4: Coding Challenge </h2>
-  </div>
-  <h3>Chart 1: The Original Gender Pay Gap </p>
-  <img src="ft.gender.png" alt="" width="400">
-  <h3> Chart 2: Replica </h3>
-  
-  <!-- Chart container -->
-  <figure id="Location9"></figure>
+          <div class = "ChartFrame">
+            <figure id = "Location9"></figure>
+          </div>
+          
+          </div>
+        </div>
+        <p>
+          
+        </p>
+  </section>
 
-  <h3> Chart 3: Tufte Changes </h3>
+  <section>
+    <div class="ButtonRow">
+  <a class="WideBtn" href="https://colab.research.google.com/drive/1i2lkpK5kGESaK8xe-h8Ivl2fB3E3KiUi" target="_blank" rel="noopener"> Scraper Link</a>
+  <a class="WideBtn" href="https://colab.research.google.com/drive/1gL6GHMU09SpoQGWUhmJ7pUATiEwcF7WQ#scrollTo=jMlzQJad5cu_" target="_blank" rel="noopener"> Data Cleaning Link</a>
+  <a class="WideBtn" href="https://colab.research.google.com/drive/1JfkZMa9C4PdWl7K1Gw4Vynk6pLQ7QQOk#scrollTo=JAsyWciX6BPa" target="_blank" rel="noopener">Link to the Yearly Launches Sub-Dataset Adaptation</a>
+</div>
 
-  <!-- Chart container -->
+  </section>
+<section>
+    <div class="chart-description">
+        <h1> Scraped Chart </h1>
+    </div>
   <figure id="Location10"></figure>
-  <p> Removed ticks and borders, lightened gridlines, added compact top-right legend, and improved spacing for a cleaner design.</p>
-  
+</section>
+
+<!-- WEEK 6 -->
+<section>
+  <div class="chart-description">
+    <h1> Week 6: Loops </h1>
+  </div>
+
+  <div class="chart-description">
+    <p>
+      This dashboard uses the FRED API. I batch-downloaded six time-series as JSON files using a Python loop (Google Colab),
+      saved them to GitHub, and then embedded six small charts using a JavaScript loop.
+    </p>
+
+    <a class="WideBtn" href="https://colab.research.google.com/drive/16-MY4W3-ZcUhnpSeVeWQb9SAO-6HkIPN" target="_blank" rel="noopener">
+      API and cleaning code (Google Colab)
+    </a>
+  </div>
+
+  <!-- 3x2 grid container for the six charts -->
+  <div class="ChartGrid6">
+    <div class="ChartCard"><figure id="Location11"></figure></div>
+    <div class="ChartCard"><figure id="Location12"></figure></div>
+    <div class="ChartCard"><figure id="Location13"></figure></div>
+    <div class="ChartCard"><figure id="Location14"></figure></div>
+    <div class="ChartCard"><figure id="Location15"></figure></div>
+    <div class="ChartCard"><figure id="Location16"></figure></div>
+  </div>
+</section>
+
+
+
+<!-- WEEK 7 -->
+<section>
+  <div class="chart-description">
+    <h1> Week 7: Maps </h1>
+  </div>
+
+  <div style="display: flex; gap: 24px; align-items: flex-start;">
+    
+    <div style="flex: 1;">
+      <h2> Choropleth Map of Wales </h2>
+      <figure id="Location17"></figure>
+    </div>
+
+    <div style="flex: 1;">
+      <h2> Coordinates Map of Scotland </h2>
+      <figure id="Location18"></figure>
+    </div>
+
+  </div>
+</section>
+
+
+<!--WEEK 8-->
+<section>
+  <div class="chart-description">
+    <h1> Week 8: Big Data </h1>
+  </div>
+
+  <div style="display: flex; gap: 24px; align-items: flex-start;"></div>
+    
+    <div style="flex: 1;">
+      <h2> Butter Prices </h2>
+      <figure id="Location19"></figure>
+    </div>
+
+    <div style="flex: 1;">
+      <h2> Olive Oil Price Distribution (2022) </h2>
+      <figure id="Location21"></figure>
+    </div>
+
+  </div>
+</section>
+
+<!-- WEEK 9 -->
+
+<section>
+  <div class="chart-description">
+    <h1> Week 9: Interactivity </h1>
+  </div>
+
+      <h2> House Price Index (HPI) </h2>
+      <figure id="Location20"></figure>
+    </div>
+
+      <h2>  </h2>
+      <figure id="Location22"></figure>
+    </div>
+
+  </div>
 </section>
 
 
 
 
-    <!-- Do you want to add more sections? -->
-        <!-- Try copying pasting the section above -->
-        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
 
+
+
+
+
+  
 
     <script>
 
@@ -160,16 +331,18 @@
         let figure_2_spec = "Charts/W1_Bitcoin.json";
         let figure_3_spec = "Charts/W2_Russia.json";
         let figure_4_spec = "Charts/W2_GDP.json";
-        let figure_5_spec = "spacebudget_visualisation.json";
-        let figure_6_spec = "Data/RandD.json";
-        let figure_7_spec = "Data/wk3_pe_ratio_char.json";
-        let figure_8_spec = "worldbank.json";
-        let figure_9_spec = "ft.replication.json";
-        let figure_10_spec = "remake.json";
-        let figure_17_spec = "Data/welsh_speakers.json";
-        let figure_18_spec = "Data/scotland_lighthouse.json";
+        let figure_5_spec = "Charts/W3_pounds.json";
+        let figure_6_spec = "Charts/W3_imports.json";
+        let figure_7_spec = "W4.png";
+        let figure_8_spec = "Charts/W4_replica.json";
+        let figure_9_spec = "Charts/W5_Worldbank.json";
+        let figure_10_spec = "Project/yearly_launch.json";
+        let figure_17_spec = "Charts/W7_Wales.json";
+        let figure_18_spec = "Charts/W7_Scotland.json";
         let figure_19_spec = "Data/butter.json";
         let figure_20_spec = "Data/house_prices.json"
+        let figure_21_spec = "Charts/W8_Olive.json"
+        let figure_22_spec = "Project/orbit.json"
 
         
         // Week 1 Charts
@@ -180,139 +353,133 @@
         vegaEmbed('#Location3', figure_3_spec)
         vegaEmbed('#Location4', figure_4_spec)
 
-        //
+        // Week 3 Charts
         vegaEmbed('#Location5', figure_5_spec)
-        vegaEmbed('#Location6', figure_6_spec)
-        vegaEmbed('#Location7', figure_7_spec)
+        vegaEmbed('#Location6', figure_6_spec)  
+
+        // Week 4 Charts
         vegaEmbed('#Location8', figure_8_spec)
         vegaEmbed('#Location9', figure_9_spec)
+
+
+const ages = [
+  ["Age15_19", "15-19"],
+  ["Age20_24", "20-24"],
+  ["Age25_29", "25-29"],
+  ["Age30_34", "30-34"],
+  ["Age35_39", "35-39"],
+  ["Age40_44", "40-44"]
+];
+
+async function buildDashboard() {
+  const baseSpec = await fetch("charts/cc4_age_small.json").then(r => r.json());
+
+  for (const [id, age] of ages) {
+    // Deep clone so each chart is independent
+    const spec = JSON.parse(JSON.stringify(baseSpec));
+
+    // Hard set the filter for this chart
+    spec.transform = [{ filter: `datum.age_group == '${age}'` }];
+
+    // Make the title simply the age group (clean & reliable)
+    spec.title = spec.title || {};
+    spec.title.text = age;
+
+    await vegaEmbed(`#${id}`, spec, { actions: false });
+  }
+}
+
+buildDashboard();
+
+
+
+
+       // Week 5 Chart
         vegaEmbed('#Location10', figure_10_spec)
+
+
+       // Week 7 Maps
         vegaEmbed('#Location17', figure_17_spec)
         vegaEmbed('#Location18', figure_18_spec)
+
+
+        // Week 8 Big Data 
         vegaEmbed('#Location19', figure_19_spec)
+        vegaEmbed('#Location21', figure_21_spec)
+
+
+        // Week 9 Interactivity
         vegaEmbed('#Location20', figure_20_spec)
+        vegaEmbed('#Location22', figure_22_spec)
 
 
     </script>
 
-  <section class="section">
-  <div class="chart-description">
-    <h2> CC6: FRED SPACE LOOP </h2>
-    <h3> LINK:  https://colab.research.google.com/drive/16-MY4W3-ZcUhnpSeVeWQb9SAO-6HkIPN </h3>
-    </section>
-<figure id="Location11"></figure>
-<figure id="Location12"></figure>
-<figure id="Location13"></figure>
-<figure id="Location14"></figure>
-<figure id="Location15"></figure>
-<figure id="Location16"></figure>
 <section>
-  </div>
+</div>
 
-
-  <script>
-
-  // 1. DEFINE TEMPLATE SPEC FOR CHART
+<!-- LOOP -->
+ <script>
   let templateSpec = {
-      "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-      "title": {
-          "text": "", // This is injected via code, added from the csv that we load above.
-          "subtitle": ["",""], // Added from csv
-          "anchor": "middle",
-          "color": "black"
-      },
-      "view": {"stroke": "transparent"}, // Make box around chart clear
-      "data":{
-          "url": "", // Added from loop, e.g. "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/data_US_FRED-CPIAUCSL.json"
-          "format":{
-              "type": "json",
-              "property": "observations"    // Tell Vega which json 'key' the data is in (else we will just see the metadata).
-          }},
-      "transform": [
-          {"calculate":"year(datum.date)", "as": "year"},
-          {"filter": "datum.year >= 2000"}
-      ],
-          
-      "height": 200,
-      "width": 200,
-      "mark": {"type": "line", "color": "#58b3c7", "interpolate": "basis"},
-      "encoding": {
-          "x":{"field": "date", "type": "temporal", "title": null, "axis": {"grid": false,}},
-          "y":{"field": "value", "type": "quantitative", "title": null, "axis": {"grid": false}}
-      }
-  }
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "title": {
+      "text": "",
+      "subtitle": ["",""],
+      "anchor": "middle",
+      "color": "black"
+    },
+    "view": {"stroke": "transparent"},
+    "data": {
+      "url": "",
+      "format": {"type": "json", "property": "observations"}
+    },
+    "transform": [
+      {"calculate":"year(datum.date)", "as": "year"},
+      {"filter": "datum.year >= 2000"}
+    ],
+    "height": 200,
+    "width": 200,
+    "mark": {"type": "line", "color": "#58b3c7", "interpolate": "basis"},
+    "encoding": {
+      "x":{"field": "date", "type": "temporal", "title": null, "axis": {"grid": false}},
+      "y":{"field": "value", "type": "quantitative", "title": null, "axis": {"grid": false}}
+    }
+  };
+
   let chartFiles = [
     "Fred_space/data_US_FRED-LEU0254534400A.json",
     "Fred_space/data_US_FRED-LEU0254694600A.json",
     "Fred_space/data_US_FRED-LEU0254748000A.json",
     "Fred_space/data_US_FRED-W595RC1A027NBEA.json",
-    "Fred_space/data_US_FRED-W595RG3A086NBEA.json",
+    "Fred_space/data_US_FRED-LEU0254587800A.json",
     "Fred_space/data_US_FRED-W595RZ2A224NBEA.json"
   ];
 
-  let chartTitles =[
-    'Median weekly earnings',
-    'x',
-    'x',
-    'x',
-    'x',
-    'x',
-  ]
+  let chartTitles = [
+    "Space Scientists Weekly Earnings (Median)",
+    "The Number of Women Space Scientists",
+    "Women Space Scientists Weekly Earnings",
+    "Government Space Expenditures",
+    "Men Space Scientists Weekly Earnings",
+    "% change in Government Space Expenditures"
+  ];
 
-  // use RAW, and ensure trailing slash
   let baseUrl = "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/main/";
 
-
   for (let i = 0; i < chartFiles.length; i++) {
-    // 1. Build raw github link
     let url = baseUrl + chartFiles[i];
-    console.log(url)
-    // 2. Make a copy of chart template & replace URL & TITLE
-    let spec = JSON.parse(JSON.stringify(templateSpec));
-    spec.data = { url, format: { type: "json", property: "observations" } };
-    // spec.data.url = url
-    spec.title = spec.title || {};
-    // spec.title.text = chartFiles[i].split('-')[1].split('.')[0];
-    spec.title.text = chartFiles[i].split('-')[1].split('.')[0];
-    console.log(JSON.stringify(spec))
 
-    
-    let chartDiv = document.getElementById(`Location${i + 11}`);
-    console.log(`Location${i+11}`)
-    vegaEmbed(chartDiv, spec, { actions: false });
+    let spec = JSON.parse(JSON.stringify(templateSpec));
+    spec.data.url = url;
+    spec.title.text = chartTitles[i];
+
+    vegaEmbed(`#Location${i + 11}`, spec, { actions: false });
   }
 </script>
+
   
   </section>
 
-
-<section>
-       <div class="chart-description">
-           <h2> CC7: Choropleth Map of Wales </h2>
-  </div>
-  <figure id="Location17"></figure>
-  <div class="chart-description">
-    <h2> CC7: Coordinates Map of Scotland </h2>
-  <figure id="Location18"></figure>
-  </div>
-</section>
-
-<section>
-       <div class="chart-description">
-           <h2> CC8: Butter Prices </h2>
-  </div>
-  <figure id="Location19"></figure>
-
-  </div>
-</section>
-
-<section>
-       <div class="chart-description">
-           <h2> CC9: Interactivity </h2>
-  </div>
-  <figure id="Location20"></figure>
-
-  </div>
-</section>
+</body>
 
 </html>

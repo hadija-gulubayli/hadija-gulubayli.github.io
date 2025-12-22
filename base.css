@@ -1,0 +1,122 @@
+html, body { margin: 0; padding: 0; }
+
+/* HERO */
+.ProjectHero{
+  position: relative;
+  min-height: 62vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+
+  /* Put your space image here */
+  background-image: url("Project/carina.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Muted overlay tint (adjust opacity + tint colour) */
+.ProjectHero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(120, 105, 140, 0.55); /* muted purple/grey tint */
+}
+
+/* Optional: extra dark gradient so text always reads well */
+.ProjectHero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.35)
+  );
+}
+
+.HeroContent{
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 80px 20px 60px;
+}
+
+.HeroContent h1{
+  font-size: clamp(42px, 6vw, 72px);
+  margin: 0 0 14px;
+  letter-spacing: 0.5px;
+}
+
+.HeroSub{
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* NAV */
+.TopNav{
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 0 16px;
+
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.TopNav a{
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  padding: 6px 2px;
+  border-bottom: 1px solid transparent;
+}
+
+.TopNav a:hover{
+  color: #fff;
+  border-bottom-color: rgba(255,255,255,0.55);
+}
+
+.TopNav a.active{
+  color: #fff;
+  border-bottom-color: rgba(255,255,255,0.95);
+}
+.PageBody{
+  background: #ffffff;
+  padding: 70px 20px 90px;
+}
+
+.Intro{
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Intro h2{
+  font-size: clamp(34px, 4vw, 54px);
+  margin: 0 0 10px;
+  font-weight: 800;
+}
+
+.Intro h3{
+  font-size: clamp(20px, 2.2vw, 28px);
+  margin: 0 0 22px;
+  font-weight: 700;
+}
+
+.Intro p{
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(0,0,0,0.78);
+}

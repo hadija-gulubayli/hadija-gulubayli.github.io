@@ -62,3 +62,38 @@ section {
 	margin-bottom: 40px;
 }
 
+.ChartImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.ChartGrid6{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.ButtonRow{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 10px 0 16px 0;
+}
+
+.WideBtn{
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid #cacac3;
+  background: #edebe1;
+  color: #111111;
+  font-weight: 600;
+}
+
+.WideBtn:hover{
+  filter: brightness(0.98);
+}
