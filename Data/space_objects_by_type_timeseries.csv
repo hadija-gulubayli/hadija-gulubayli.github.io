@@ -1,0 +1,245 @@
+Year,Object type,Objects
+1957,Payloads,2
+1958,Debris,1
+1958,Payloads,5
+1958,Rocket bodies,1
+1959,Debris,6
+1959,Payloads,12
+1959,Rocket bodies,4
+1960,Debris,20
+1960,Payloads,23
+1960,Rocket bodies,11
+1961,Debris,360
+1961,Payloads,39
+1961,Rocket bodies,14
+1962,Debris,381
+1962,Payloads,64
+1962,Rocket bodies,35
+1963,Debris,595
+1963,Payloads,92
+1963,Rocket bodies,47
+1964,Debris,699
+1964,Payloads,141
+1964,Rocket bodies,71
+1965,Debris,1698
+1965,Payloads,226
+1965,Rocket bodies,113
+1966,Debris,1898
+1966,Payloads,273
+1966,Rocket bodies,151
+1967,Debris,1925
+1967,Payloads,338
+1967,Rocket bodies,190
+1968,Debris,2243
+1968,Payloads,378
+1968,Rocket bodies,223
+1969,Debris,2482
+1969,Payloads,420
+1969,Rocket bodies,251
+1970,Debris,3027
+1970,Payloads,465
+1970,Rocket bodies,285
+1971,Debris,3203
+1971,Payloads,544
+1971,Rocket bodies,337
+1972,Debris,3386
+1972,Payloads,610
+1972,Rocket bodies,382
+1973,Debris,3611
+1973,Payloads,680
+1973,Rocket bodies,421
+1974,Debris,3856
+1974,Payloads,740
+1974,Rocket bodies,465
+1975,Debris,4415
+1975,Payloads,826
+1975,Rocket bodies,531
+1976,Debris,4861
+1976,Payloads,916
+1976,Rocket bodies,593
+1977,Debris,5152
+1977,Payloads,990
+1977,Rocket bodies,653
+1978,Debris,5281
+1978,Payloads,1067
+1978,Rocket bodies,703
+1979,Debris,5465
+1979,Payloads,1097
+1979,Rocket bodies,727
+1980,Debris,5477
+1980,Payloads,1134
+1980,Rocket bodies,748
+1981,Debris,5906
+1981,Payloads,1212
+1981,Rocket bodies,790
+1982,Debris,7979
+1982,Payloads,1283
+1982,Rocket bodies,832
+1983,Debris,8214
+1983,Payloads,1369
+1983,Rocket bodies,897
+1984,Debris,8226
+1984,Payloads,1474
+1984,Rocket bodies,972
+1985,Debris,8386
+1985,Payloads,1570
+1985,Rocket bodies,1058
+1986,Debris,9092
+1986,Payloads,1653
+1986,Rocket bodies,1096
+1987,Debris,9489
+1987,Payloads,1736
+1987,Rocket bodies,1151
+1987,UNKNOWN,1
+1988,Debris,9244
+1988,Payloads,1803
+1988,Rocket bodies,1195
+1988,UNKNOWN,1
+1989,Debris,9042
+1989,Payloads,1857
+1989,Rocket bodies,1232
+1989,UNKNOWN,1
+1990,Debris,9017
+1990,Payloads,1961
+1990,Rocket bodies,1294
+1990,UNKNOWN,1
+1991,Debris,9166
+1991,Payloads,2038
+1991,Rocket bodies,1327
+1991,UNKNOWN,1
+1992,Debris,9438
+1992,Payloads,2098
+1992,Rocket bodies,1388
+1992,UNKNOWN,1
+1993,Debris,11272
+1993,Payloads,2160
+1993,Rocket bodies,1439
+1993,UNKNOWN,1
+1994,Debris,12243
+1994,Payloads,2249
+1994,Rocket bodies,1501
+1994,UNKNOWN,1
+1995,Debris,12502
+1995,Payloads,2312
+1995,Rocket bodies,1544
+1995,UNKNOWN,1
+1996,Debris,12400
+1996,Payloads,2382
+1996,Rocket bodies,1584
+1996,UNKNOWN,1
+1997,Debris,12835
+1997,Payloads,2504
+1997,Rocket bodies,1632
+1997,UNKNOWN,1
+1998,Debris,12770
+1998,Payloads,2992
+1998,Rocket bodies,1649
+1998,UNKNOWN,50
+1999,Debris,16521
+1999,Payloads,3089
+1999,Rocket bodies,1665
+1999,UNKNOWN,50
+2000,Debris,16756
+2000,Payloads,3172
+2000,Rocket bodies,1674
+2000,UNKNOWN,50
+2001,Debris,16902
+2001,Payloads,3208
+2001,Rocket bodies,1663
+2001,UNKNOWN,50
+2002,Debris,16739
+2002,Payloads,3260
+2002,Rocket bodies,1660
+2002,UNKNOWN,50
+2003,Debris,16586
+2003,Payloads,3324
+2003,Rocket bodies,1688
+2003,UNKNOWN,50
+2004,Debris,16530
+2004,Payloads,3376
+2004,Rocket bodies,1708
+2004,UNKNOWN,50
+2005,Debris,16448
+2005,Payloads,3425
+2005,Rocket bodies,1723
+2005,UNKNOWN,50
+2006,Debris,17236
+2006,Payloads,3495
+2006,Rocket bodies,1755
+2006,UNKNOWN,50
+2007,Debris,17275
+2007,Payloads,3582
+2007,Rocket bodies,1790
+2007,UNKNOWN,50
+2008,Debris,16830
+2008,Payloads,3663
+2008,Rocket bodies,1824
+2008,UNKNOWN,50
+2009,Debris,16777
+2009,Payloads,3761
+2009,Rocket bodies,1861
+2009,UNKNOWN,50
+2010,Debris,16679
+2010,Payloads,3845
+2010,Rocket bodies,1905
+2010,UNKNOWN,50
+2011,Debris,16724
+2011,Payloads,3934
+2011,Rocket bodies,1933
+2011,UNKNOWN,50
+2012,Debris,16606
+2012,Payloads,4024
+2012,Rocket bodies,1960
+2012,UNKNOWN,50
+2013,Debris,16389
+2013,Payloads,4188
+2013,Rocket bodies,1988
+2013,UNKNOWN,50
+2014,Debris,16111
+2014,Payloads,4293
+2014,Rocket bodies,2018
+2014,UNKNOWN,50
+2015,Debris,15829
+2015,Payloads,4388
+2015,Rocket bodies,2058
+2015,UNKNOWN,53
+2016,Debris,15772
+2016,Payloads,4495
+2016,Rocket bodies,2094
+2016,UNKNOWN,53
+2017,Debris,15721
+2017,Payloads,4821
+2017,Rocket bodies,2130
+2017,UNKNOWN,62
+2018,Debris,16045
+2018,Payloads,5094
+2018,Rocket bodies,2199
+2018,UNKNOWN,108
+2019,Debris,16091
+2019,Payloads,5425
+2019,Rocket bodies,2231
+2019,UNKNOWN,151
+2020,Debris,15957
+2020,Payloads,6548
+2020,Rocket bodies,2254
+2020,UNKNOWN,148
+2021,Debris,15755
+2021,Payloads,8109
+2021,Rocket bodies,2286
+2021,UNKNOWN,220
+2022,Debris,14708
+2022,Payloads,10030
+2022,Rocket bodies,2334
+2022,UNKNOWN,340
+2023,Debris,13547
+2023,Payloads,12089
+2023,Rocket bodies,2361
+2023,UNKNOWN,493
+2024,Debris,13311
+2024,Payloads,13741
+2024,Rocket bodies,2371
+2024,UNKNOWN,536
+2025,Debris,12690
+2025,Payloads,16862
+2025,Rocket bodies,2399
+2025,UNKNOWN,638
