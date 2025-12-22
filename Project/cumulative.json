@@ -1,0 +1,98 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Cumulative Objects Launched into Outer Space (2025)",
+    "subtitle": "UNOOSA (cleaned) | Tooltip shows total and active objects",
+    "anchor": "start"
+  },
+  "width": 700,
+  "height": 420,
+  "projection": {"type": "equalEarth"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/datasets/advanced/map_world.geojson",
+    "format": {"type": "json", "property": "features"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.ISO3",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/unoosa_cumulative.csv",
+          "format": {"type": "csv"}
+        },
+        "key": "iso3",
+        "fields": ["country", "total_launches", "active_launches"]
+      }
+    },
+    {
+      "calculate": "isValid(datum.total_launches) ? toNumber(datum.total_launches) : 0",
+      "as": "total"
+    },
+    {
+      "calculate": "isValid(datum.active_launches) ? toNumber(datum.active_launches) : 0",
+      "as": "active"
+    },
+    {"calculate": "datum.total - datum.active", "as": "inactive"},
+    {
+      "calculate": "datum.total == 0 ? null : datum.total <= 50 ? '1-50' : datum.total <= 100 ? '50-100' : datum.total <= 200 ? '100-200' : datum.total <= 500 ? '200-500' : datum.total <= 1000 ? '500-1,000' : datum.total <= 2000 ? '1,000-2,000' : datum.total <= 5000 ? '2,000-5,000' : '5,000+'",
+      "as": "bucket"
+    }
+  ],
+  "params": [
+    {
+      "name": "legendSelect",
+      "select": {"type": "point", "fields": ["bucket"]},
+      "bind": "legend",
+      "empty": "all"
+    },
+    {
+      "name": "hover",
+      "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
+    }
+  ],
+  "mark": {"type": "geoshape", "stroke": "#ffffff", "strokeWidth": 0.35},
+  "encoding": {
+    "color": {
+      "condition": {"test": "datum.total == 0", "value": "#f5f7fa"},
+      "field": "bucket",
+      "type": "nominal",
+      "legend": {"title": "Cumulative objects (total)"},
+      "scale": {
+        "domain": [
+          "1-50",
+          "50-100",
+          "100-200",
+          "200-500",
+          "500-1,000",
+          "1,000-2,000",
+          "2,000-5,000",
+          "5,000+"
+        ],
+        "range": [
+          "#8fa3bf",
+          "#6a86a8",
+          "#466489",
+          "#355373",
+          "#2a4663",
+          "#223b56",
+          "#1b324b",
+          "#142a40"
+        ]
+      }
+    },
+    "opacity": {
+      "condition": {"param": "legendSelect", "value": 1},
+      "value": 0.15
+    },
+    "strokeWidth": {
+      "condition": {"param": "hover", "value": 0.9},
+      "value": 0.35
+    },
+    "tooltip": [
+      {"field": "properties.COUNTRY", "type": "nominal", "title": "Country"},
+      {"field": "total", "type": "quantitative", "title": "Total Launches"},
+      {"field": "active", "type": "quantitative", "title": "Active"}
+    ]
+  },
+  "config": {}
+}

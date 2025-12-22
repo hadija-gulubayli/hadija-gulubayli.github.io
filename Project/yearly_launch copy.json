@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Yearly Launches by Country",
+    "subtitle": "UNOOSA | Objects launched per year",
+    "anchor": "start"
+  },
+  "width": 700,
+  "height": 320,
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/unoosa_yearly_launches.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "filter": "isValid(datum.launch_year) && isValid(datum.launches) && isValid(datum.country)"
+    },
+    {"filter": "datum.launch_year >= yearMin && datum.launch_year <= yearMax"},
+    {"filter": "datum.country == countryPick"}
+  ],
+  "params": [
+    {
+      "name": "countryPick",
+      "value": "United States",
+      "bind": {
+        "input": "select",
+        "name": "Country: ",
+        "options": [
+          "United States",
+          "Russian Federation",
+          "China",
+          "United Kingdom",
+          "France",
+          "Japan",
+          "India"
+        ]
+      }
+    },
+    {
+      "name": "yearMin",
+      "value": 1975,
+      "bind": {
+        "input": "range",
+        "min": 1975,
+        "max": 2025,
+        "step": 1,
+        "name": "From: "
+      }
+    },
+    {
+      "name": "yearMax",
+      "value": 2025,
+      "bind": {
+        "input": "range",
+        "min": 1975,
+        "max": 2025,
+        "step": 1,
+        "name": "To: "
+      }
+    }
+  ],
+  "mark": {"type": "line", "strokeWidth": 2, "color": "#243f66"},
+  "encoding": {
+    "x": {
+      "field": "launch_year",
+      "type": "quantitative",
+      "title": "Year",
+      "axis": {"format": "d"}
+    },
+    "y": {
+      "field": "launches",
+      "type": "quantitative",
+      "title": "Objects Launched"
+    },
+    "tooltip": [
+      {"field": "country", "type": "nominal", "title": "Country"},
+      {"field": "launch_year", "type": "quantitative", "title": "Year"},
+      {"field": "launches", "type": "quantitative", "title": "Launches"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"labelFontSize": 11, "titleFontSize": 12},
+    "title": {"fontSize": 16, "subtitleFontSize": 12}
+  }
+}

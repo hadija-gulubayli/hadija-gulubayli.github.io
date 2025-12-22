@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Mission Purpose Composition of Active Space Objects as of 2025",
+    "subtitle": "Top 50 countries | Shares within country ",
+    "anchor": "start"
+  },
+  "width": 720,
+  "height": 520,
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/unoosa_active_purpose_composition_top50.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "joinaggregate": [
+        {"op": "sum", "field": "active_objects", "as": "total_active"}
+      ],
+      "groupby": ["country"]
+    },
+    {"calculate": "datum.active_objects / datum.total_active", "as": "share"}
+  ],
+  "mark": {"type": "bar", "orient": "horizontal"},
+  "encoding": {
+    "y": {
+      "field": "country",
+      "type": "nominal",
+      "sort": {"field": "total_active", "order": "ascending"},
+      "title": null
+    },
+    "x": {
+      "aggregate": "sum",
+      "field": "share",
+      "type": "quantitative",
+      "title": "Share of active objects",
+      "axis": {"format": "%"},
+      "scale": {"domain": [0, 1]}
+    },
+    "color": {
+      "field": "purpose_class",
+      "type": "nominal",
+      "title": "Mission purpose"
+    },
+    "tooltip": [
+      {"field": "country", "type": "nominal", "title": "Country"},
+      {"field": "purpose_class", "type": "nominal", "title": "Purpose"},
+      {
+        "field": "share",
+        "type": "quantitative",
+        "title": "Share within country",
+        "format": ".1%"
+      },
+      {
+        "field": "active_objects",
+        "type": "quantitative",
+        "title": "Active objects (count)"
+      }
+    ]
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"labelFontSize": 11, "titleFontSize": 12},
+    "legend": {"labelFontSize": 11, "titleFontSize": 12}
+  }
+}
