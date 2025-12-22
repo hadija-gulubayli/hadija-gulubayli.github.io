@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "padding": {"left": 55, "right": 10, "top": 10, "bottom": 30},
+  "title": {
+    "text": "UK Imports",
+    "subtitle": "Import series, monthly/quarterly | Source: ONS",
+    "anchor": "start",
+    "offset": 25
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/main/Data/imports_data.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {"calculate": "toDate(datum.date + '-01')", "as": "parsed_date"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 2, "color": "#002FA7"},
+      "encoding": {
+        "x": {
+          "field": "parsed_date",
+          "type": "temporal",
+          "title": null,
+          "axis": {"grid": false}
+        },
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "title": "Index",
+          "axis": {"grid": true}
+        },
+        "tooltip": [
+          {
+            "field": "parsed_date",
+            "type": "temporal",
+            "title": "Date",
+            "timeUnit": "yearmonth"
+          },
+          {
+            "field": "value",
+            "type": "quantitative",
+            "title": "Value",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {"values": [{"event": "EU Referendum", "date": "2016-06-23"}]},
+      "mark": {"type": "rule", "strokeDash": [4, 4]},
+      "encoding": {
+        "x": {"field": "date", "type": "temporal"},
+        "tooltip": [{"field": "event", "type": "nominal"}]
+      }
+    },
+    {
+      "data": {"values": [{"event": "EU–UK TCA", "date": "2021-01-01"}]},
+      "mark": {"type": "rule", "strokeDash": [4, 4]},
+      "encoding": {
+        "x": {"field": "date", "type": "temporal"},
+        "tooltip": [{"field": "event", "type": "nominal"}]
+      }
+    }
+  ],
+  "view": {"stroke": "transparent"},
+  "config": {}
+}

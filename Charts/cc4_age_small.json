@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 260,
+  "height": 170,
+  "background": "#edebe1",
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/birth_rate.csv?v=2",
+    "format": {"type": "csv"}
+  },
+  "params": [{"name": "age", "value": "15-19"}],
+  "transform": [{"filter": "datum.age_group == age"}],
+  "title": {"text": {"expr": "age"}, "anchor": "start", "fontSize": 12},
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {"value": 25},
+          {"value": 50},
+          {"value": 75},
+          {"value": 100},
+          {"value": 125}
+        ]
+      },
+      "mark": {"type": "rule", "color": "#cacac3", "strokeWidth": 1},
+      "encoding": {
+        "y": {
+          "field": "value",
+          "type": "quantitative",
+          "scale": {"domain": [0, 125]}
+        }
+      }
+    },
+    {
+      "mark": {"type": "line", "strokeWidth": 2, "color": "#111111"},
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+            "format": "%Y",
+            "tickCount": 4,
+            "grid": false,
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "birth_rate",
+          "type": "quantitative",
+          "title": null,
+          "scale": {"domain": [0, 125]},
+          "axis": {
+            "values": [25, 50, 75, 100, 125],
+            "orient": "right",
+            "grid": false,
+            "domain": false,
+            "ticks": false,
+            "offset": -3
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {"fill": "#edebe1", "stroke": "transparent"},
+    "axis": {"labelFontSize": 9, "titleFontSize": 10}
+  }
+}

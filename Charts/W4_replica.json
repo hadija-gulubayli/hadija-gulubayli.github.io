@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 300,
+  "height": 300,
+  "background": "#edebe1",
+  "padding": {"left": 20, "right": 10, "top": 5, "bottom": 10},
+  "title": {
+    "text": "United States, birth rate per 1,000 women",
+    "subtitle": "By age of mother",
+    "anchor": "start",
+    "fontSize": 15,
+    "subtitleFontSize": 11
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/birth_rate.csv?v=2",
+    "format": {"type": "csv"}
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {"value": 25},
+          {"value": 50},
+          {"value": 75},
+          {"value": 100},
+          {"value": 125}
+        ]
+      },
+      "mark": {"type": "rule", "color": "#cacac3", "strokeWidth": 1},
+      "encoding": {
+        "y": {
+          "field": "birth_rate",
+          "type": "quantitative",
+          "scale": {"domain": [0, 125]},
+          "axis": {
+            "values": [0, 25, 50, 75, 100, 125],
+            "orient": "right",
+            "grid": true,
+            "domain": false,
+            "ticks": false,
+            "offset": -7,
+            "title": ""
+          }
+        }
+      }
+    },
+    {
+      "transform": [{"filter": "datum.age_group != 'All'"}],
+      "mark": {"type": "line", "strokeWidth": 2},
+      "encoding": {
+        "x": {
+          "field": "year",
+          "title": "",
+          "type": "temporal",
+          "axis": {"format": "%Y", "tickCount": 6, "grid": false}
+        },
+        "y": {
+          "field": "birth_rate",
+          "type": "quantitative",
+          "scale": {"domain": [0, 125]},
+          "axis": {
+            "values": [0, 25, 50, 75, 100, 125],
+            "orient": "right",
+            "grid": false,
+            "domain": false,
+            "title": ""
+          }
+        },
+        "color": {
+          "field": "age_group",
+          "type": "nominal",
+          "scale": {
+            "domain": ["15-19", "20-24", "25-29", "30-34", "35-39", "40-44"],
+            "range": ["#88867d", "#c5c4ba", "", "#edab94", "#df5941", "#a2241f"]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "transform": [{"filter": "datum.age_group == 'All'"}],
+      "mark": {"type": "line", "stroke": "#111111", "strokeWidth": 2.5},
+      "encoding": {
+        "x": {"field": "year", "type": "temporal"},
+        "y": {"field": "birth_rate", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"year": "2017-01-01", "birth_rate": 106, "label": "30-34"},
+          {"year": "2017-01-01", "birth_rate": 75, "label": "25-29"},
+          {"year": "1991-01-01", "birth_rate": 50, "label": "15-19"},
+          {"year": "1991-01-01", "birth_rate": 25, "label": "35-39"},
+          {"year": "2005-01-01", "birth_rate": 15, "label": "40-44"},
+          {"year": "2005-01-01", "birth_rate": 72, "label": "All"},
+          {"year": "1991-01-01", "birth_rate": 100, "label": "20-24"}
+        ]
+      },
+      "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 12},
+      "encoding": {
+        "x": {"field": "year", "type": "temporal"},
+        "y": {"field": "birth_rate", "type": "quantitative"},
+        "text": {"field": "label"},
+        "color": {
+          "condition": {"test": "datum.label == 'All'", "value": "#111111"},
+          "value": "#4a4a4a"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {"fill": "#edebe1", "stroke": "transparent"},
+    "axis": {"labelFontSize": 10, "titleFontSize": 11}
+  }
+}

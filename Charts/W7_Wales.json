@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Welsh Speakers by Local Authority (2021)",
+  "width": 300,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/topojson_wales.json",
+    "format": {
+      "type": "topojson",
+      "feature": "Local Authorities - Low Water mark - spatial data"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "properties.code",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/welsh_speakers.csv"
+        },
+        "key": "code",
+        "fields": ["welsh_pct"]
+      }
+    }
+  ],
+  "projection": {"type": "mercator"},
+  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+  "encoding": {
+    "color": {
+      "field": "welsh_pct",
+      "type": "quantitative",
+      "title": "% of Welsh Speakers",
+      "scale": {"scheme": "blues"}
+    },
+    "tooltip": [
+      {
+        "field": "properties.name",
+        "type": "nominal",
+        "title": "Local Authority District"
+      },
+      {
+        "field": "welsh_pct",
+        "type": "quantitative",
+        "title": "% Welsh-speaking",
+        "format": ".1%"
+      }
+    ]
+  },
+  "config": {}
+}

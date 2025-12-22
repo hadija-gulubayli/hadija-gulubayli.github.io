@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Distribution of Olive Oil Prices Across UK Stores (2022)",
+    "subtitle": ["Long-Run Prices Database (LRPD)"],
+    "anchor": "start"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/olive_oil_price_distribution_2022.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "calculate": "replace(replace(replace(replace(replace(replace(datum.price_bin,'[',''),']',''),'(',''),')',''),', ',' - '),',',' - ')",
+      "as": "band"
+    },
+    {"calculate": "split(datum.band,' - ')[0]", "as": "band_start"},
+    {"calculate": "split(datum.band,' - ')[1]", "as": "band_end"},
+    {
+      "calculate": "format(toNumber(datum.band_start), '.1f') + ' - ' + format(toNumber(datum.band_end), '.1f')",
+      "as": "band_label"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "color": "#002FA7",
+    "cornerRadiusTopLeft": 3,
+    "cornerRadiusTopRight": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "band_label",
+      "type": "ordinal",
+      "title": "Price band (£)",
+      "sort": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelPadding": 8,
+        "labelFontSize": 12,
+        "titlePadding": 12,
+        "tickSize": 0
+      },
+      "scale": {"paddingInner": 0.05, "paddingOuter": 0.04}
+    },
+    "y": {
+      "field": "count",
+      "type": "quantitative",
+      "title": "Number of price observations",
+      "axis": {"titlePadding": 10}
+    },
+    "tooltip": [
+      {"field": "band_label", "type": "ordinal", "title": "Price band (£)"},
+      {"field": "count", "type": "quantitative", "title": "Observations"}
+    ]
+  },
+  "width": 420,
+  "height": 340,
+  "autosize": {"type": "fit", "contains": "padding"},
+  "padding": {"top": 12, "left": 8, "right": 8, "bottom": 8},
+  "config": {
+    "title": {"limit": 0},
+    "view": {"stroke": null},
+    "bar": {"continuousBandSize": 28}
+  }
+}
