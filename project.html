@@ -67,15 +67,6 @@
 
 <p>
   
-This project draws on object-level data from the United Nations Office for Outer Space Affairs (UNOOSA) Register of Objects Launched into Outer Space. As the register does not provide a direct bulk download option, the dataset was programmatically retrieved by inspecting and replicating the underlying network requests used by the web interface. These requests return paginated JSON responses, which were iteratively queried and combined to reconstruct the full dataset. This approach ensured completeness while preserving the structure and metadata of the original register.
-
-
-
-Each observation in the resulting dataset represents an individual space object and includes information on launch date, registering state, operational status, and function. Significant data cleaning was required. Registering states were standardised to contemporary country names to ensure consistency with ISO3 country codes used for geographic mapping. Historical entities (e.g. the Soviet Union) and international organisations (e.g. the European Union) were reassigned to successor or managing states where appropriate. Objects with unknown or ambiguous registration were excluded. Country identifiers were then converted to ISO3 codes to enable a join with a global GeoJSON map.
-
-
-
-Objects were classified as active if they remain extant and tracked, regardless of orbital regime or destination (including Earth orbit, lunar orbit, heliocentric trajectories, and interplanetary missions). Objects marked as decayed, deorbited, or recovered were classified as inactive. For each country, cumulative launches, active objects, and inactive objects were aggregated. The choropleth map displays cumulative launches using discrete buckets to improve interpretability across orders of magnitude. Countries with zero launches are shown in a faint neutral tone and excluded from the legend. Interactive tooltips provide a breakdown of total, active, and inactive objects, while legend-based filtering and hover interactions support exploratory analysis.
 </p>
 </section>
 
