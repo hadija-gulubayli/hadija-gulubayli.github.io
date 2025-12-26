@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.cdnfonts.com/css/nasalization-2" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
 
 <link rel="stylesheet" href="base.css" />
-<link rel="stylesheet" href="project.css" />
 
   <title>Hadija's Project</title>
 
@@ -29,27 +33,225 @@
   </nav>
 
   <div class="HeroContent">
-    <h1>Orbital Responsibility</h1>
+    <h1> Global Space Activity </h1>
   </div>
 </header>
 
 
-<main class="PageBody">
-  <section class="Intro">
-    <h2>Global Space Activity, Orbital Congestion, and Responsibility for Earth’s Orbits</h2>
-<h3></h3>
-  </section>
+<section class="project-aims">
+  <p class="lead">
+    This project examines the growth and composition of global space activity and
+    its implications for orbital congestion.
+  </p>
 
-  <!-- Your charts + commentary will go here -->
-</main>
+  <p>
+    Using satellite launch and object registry data, the analysis traces how space
+    activity has evolved over time, how it is distributed across countries and orbital
+    regimes, and which actors contribute most to congestion in Earth’s orbits.
+  </p>
+
+  <p>
+    The project aims to situate contemporary space activity within a broader policy
+    context, highlighting emerging risks and the need for international
+    governance.
+  </p>
+</section>
+
+<!-- 1 Chart Section -->
+
+<section class="space-stage">
+  <div class="chart-card">
+    <h2>From Rarity to Routine: The Acceleration of Space Launch Activity</h2>
+
+    <div class="chart-frame">
+      <figure id="Project2"></figure>
+    </div>
+
+<div class="project-aims">
+  <p class="lead">
+    The U.S shows the most sustained growth since the Cold War, while Russia’s (the Soviet Union's) activity peaked during. China’s launch cadence accelerates from 2009, reflecting its later but increasingly intensive entry into large-scale space activity.
+  </p>
+
+  <p class="lead">
+ The data is scraped from the United Nations Office for Outer Space Affairs (UNOOSA) Register of Objects Launched into Outer Space, comprising 22,374 objects. Registry entries were cleaned and aggregated by launch year and country. Historical entities, supranational organisations, and inconsistent country naming required manual standardisation; with Soviet-era launches attributed to Russia as the recognised successor state; therefore historical accuracy has been sacrificed for practicality.
+  </p>
+</div>
+
+    <div class="card-links">
+      <a href="https://colab.research.google.com/drive/1i2lkpK5kGESaK8xe-h8Ivl2fB3E3KiUi?usp=sharing" target="_blank" rel="noopener">Scraper</a>
+      <a href="https://colab.research.google.com/drive/1gL6GHMU09SpoQGWUhmJ7pUATiEwcF7WQ?usp=sharing" target="_blank" rel="noopener"> Data Cleaning & Master Df</a>
+         <a href="https://colab.research.google.com/drive/1JfkZMa9C4PdWl7K1Gw4Vynk6pLQ7QQOk?usp=sharing" target="_blank" rel="noopener">Yearly Launches</a>
+      <a href="https://github.com/hadija-gulubayli/hadija-gulubayli.github.io/blob/main/Data/unoosa_yearly_launches.csv" target="_blank" rel="noopener"> Github </a>
+    </div>
+  </div>
+</section>
 
 
 
-  <section>
-    <h1 class="chart-title">Cumulative Objects Launched into Space</h1>
+<!-- 2 Chart Section -->
 
-    <figure id="Project1"></figure>
-  </section>
+<section class="space-stage">
+  <div class="chart-card">
+    <h2>Orbital Footprints Are Uneven</h2>
+
+    <div class="chart-frame">
+      <figure id="Project1"></figure>
+    </div>
+
+  <div class="project-aims">
+  
+  
+    <p class="lead">
+    Beyond the top space powers, the map highlights the diffusion of space activity: by 2025, most regions of the world, including almost all of Latin America, have registered at least one launch. Nonetheless, responsibility for orbital debris remains highly concentrated among a small number of launching states.
+   </p>
+
+  <p class="lead">
+According to UNOOSA, around 85% of all satellites, probes, landers ever launched have registered, making it the most comprehensive public source on global launches. The scraped entries were cleaned into a master dataset and further, chart-specific outputs below. For this chart, objects were classified by operational status to distinguish active from inactive (decayed or deorbited) objects, then aggregated by country and matched to ISO codes for geographic lookup.
+  </p>
+</div>
+
+    <div class="card-links">
+      <a href="YOUR_COLAB_LINK" target="_blank" rel="noopener">Colab notebook</a>
+      <a href="YOUR_DATA_LINK" target="_blank" rel="noopener">Dataset</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- 3 Chart Section -->
+<div class="chart-card">
+
+  <h2>What Is Being Put into Orbit — and Where?</h2>
+
+
+  <div class="chart-grid">
+    <div class="chart-frame">
+      <figure id="Project3"></figure>
+    </div>
+
+    <div class="chart-frame">
+      <figure id="Project4"></figure>
+    </div>
+  </div>
+
+  <div class="project-aims">
+  
+  
+    <p class="lead">
+    The dominance of the U.S in cumulative launches is closely linked to the functional composition of its space activity: 97.2% of its launched objects are communications-related and placed in Low Earth Orbit (LEO). As other countries increasingly adopt similar launch profiles, the risk of the Kessler syndrome rises: a self-sustaining chain reaction in which LEO collisions generate debris that triggers further collisions.
+  </p>
+
+  <p class="lead">
+    Space objects operate across distinct orbital regimes with different functions and congestion risks. LEO supports communications, Earth observation, scientific missions and crewed spaceflight; MEO is primarily used for navigation systems; and GEO hosts communications and weather satellites.
+  </p>
+
+  <p class="lead">
+    Orbit types and mission purposes were derived from the free-text function field in the UNOOSA Scraper using keywords. This reveals the overwhelming concentration of communications missions in LEO, while also highlighting limitations arising from inconsistent free-text reporting, hence the overwhelming classification as “other”.
+  </p>
+</div>
+
+
+
+  <div class="card-links">
+    <a href="COLAB_LINK_3" target="_blank">Colab notebook</a>
+    <a href="COLAB_LINK_4" target="_blank">Colab notebook</a>
+  </div>
+
+</div>
+
+
+<!-- 4 Chart Section -->
+<section class="space-stage">
+  <div class="chart-card">
+    <h2>Falling Launch Costs and the Structural Incentive to Overpopulate Low Earth Orbit</h2>
+    <p></p>
+
+    <div class="chart-frame">
+      <figure id="Project7"></figure>
+    </div>
+
+    <div class="project-aims">
+      <p class="lead">
+       This chart shows the cost of space launches to LEO over time, measured as the cost per kilogram of payload at first successful launch. Costs are expressed in constant 2021 US dollars on a logarithmic scale and are drawn from data compiled by the Aerospace Security Project at the Centre for Strategic and International Studies, with launch vehicles grouped by payload class.
+      </p>
+
+      <p class="lead">
+     Early launch systems were characterised by extremely high per-kilogram costs, whereas modern vehicles achieve substantially lower costs across all payload classes due to technological advances, increased launch frequency, and the entry of commercial providers. Falling launch costs help explain both the rapid growth in launch activity and the concentration of missions in LEO, where lower energy requirements make frequent deployment economically viable.
+      </p>
+
+    </div>
+
+    <div class="card-links">
+      <a href="YOUR_COLAB_LINK" target="_blank" rel="noopener">Colab notebook</a>
+      <a href="YOUR_DATA_LINK" target="_blank" rel="noopener">Dataset</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- 5 Chart Section -->
+<section class="space-stage">
+  <div class="chart-card">
+    <h2>From Activity to Externality: The Accumulation of Space Debris as a Collective Risk</h2>
+
+    <div class="chart-frame">
+      <figure id="Project6"></figure>
+    </div>
+
+    <div class="project-aims">
+      <p class="lead">
+    Data on the composition of objects in orbit were sourced from Space-Track, which provides object-level tracking data via programmatic endpoints derived from the U.S. Space Surveillance Network. The data were downloaded and cleaned to construct time series of payloads, rocket bodies, and debris. The stock of debris has grown cumulatively over decades and remains persistent once created. This reflects both the long-lived nature of orbital debris and the absence of automatic removal mechanisms for inactive objects. As launch activity continues to rise, the parallel growth of debris increases collision probability and raises the risk of cascading effects that could further degrade the usability of congested orbital regions, particularly low Earth orbit. 
+      </p>
+    </div>
+
+    <div class="card-links">
+      <a href="YOUR_COLAB_LINK" target="_blank" rel="noopener">Colab notebook</a>
+      <a href="YOUR_DATA_LINK" target="_blank" rel="noopener">Dataset</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- 6 Chart Section -->
+<section class="space-stage">
+  <div class="chart-card">
+    <h2>Connectivity Demand and Orbital Congestion: LEO Deployment Mirrors Terrestrial Consumption </h2>
+
+    <div class="chart-frame">
+      <figure id="Project5"></figure>
+    </div>
+    <div class="project-aims">
+      <p class="lead">
+        Taken together, the debris accumulation highlights the sustainability risks associated with rapidly expanding activity in LEO. This growth reflects rising demand for space-based services, particularly communications. Because communications missions account for the largest share of active LEO objects, examining broader trends in global connectivity demand helps explain the acceleration in LEO deployment.
+For this chart a country-year panel dataset was created by combining LEO launch counts from the cleaned UNOOSA register with mobile cellular subscriptions per 100 people from the World Bank API. Missing observations and strong skewness in launch counts required the application of a logarithmic scale to enable meaningful comparison.
+      </p>
+    </div>
+
+    <div class="card-links">
+      <a href="YOUR_COLAB_LINK" target="_blank" rel="noopener">Colab notebook</a>
+      <a href="YOUR_DATA_LINK" target="_blank" rel="noopener">Dataset</a>
+    </div>
+  </div>
+</section>
+
+<!-- Conclusion Section -->
+<section class="project-conclusion">
+  <h2 class="section-label">Conclusion</h2>
+
+  <p class="lead">
+    Global space activity has entered a phase of rapid expansion, characterised by falling launch costs, the proliferation of large satellite constellations, and the increasing centrality of low Earth orbit to communications and connectivity. 
+  </p>
+
+  <p>
+   The analysis shows that responsibility for orbital congestion and debris accumulation is highly concentrated among a small number of states, while the risks generated by this activity are shared globally.
+  </p>
+
+  <p>
+    As debris accumulates and launch activity intensifies, the sustainability of Earth’s orbits increasingly resembles that of other global commons: incentives to expand use remain strong, while incentives to restrain activity or internalise external costs remain weak. The challenge facing space governance is therefore not primarily technological, but institutional: how to align the rapid growth of space-based services with the long-term viability of the orbital environment on which they depend.
+  </p>
+</section>
+
+
 
   <script>
     // Use a normal relative path (adjust to where your JSON actually lives)
@@ -64,44 +266,15 @@
     vegaEmbed("#Project4", "Project/purpose_composition.json")  
     vegaEmbed("#Project5", "Project/mobile_leo.json")
     vegaEmbed("#Project6", "Project/space_force.json")
+    vegaEmbed("#Project7", "Project/Space_costs.json") 
   </script>
 
-<p>
-  
-</p>
-</section>
 
-<section>
- <h1 class="chart-title">Yearly Launches by Country (Top 7)</h1>
 
-    <figure id="Project2"></figure>
 
-</section>
-
-<section>
-  <h1 class="chart-title"> Active Objects in Different Orbits </h1>
-  <figure id="Project3"></figure>
-</section>
-  
-<section>
-  <h1 class="chart-title"> Purpose Composition by Country </h1>
-  <figure id="Project4"></figure>
-</section>
-  
-<section>
-  <h1 class="chart-title"> LEO and Mobile Subscriptions </h1>
-  <figure id="Project5"></figure>
-</section>
-  
-<section>
-  <h1 class="chart-title"> Space Debris </h1>
-  <figure id="Project6"></figure>
-</section>
   
 
 </body>
-
-
 
 </html>
 
