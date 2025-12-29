@@ -1,0 +1,46 @@
+/* home.css — minimal, clean landing page (prevents “chaotic” stacking) */
+/* base.css already styles .ProjectHero, .TopNav, .HeroContent */
+
+.HomeHero{
+  /* Use your landing image here (put a file like home.jpg in root) */
+  background-image: url("space.jpg");
+}
+
+/* CTA buttons under the hero text */
+.HomeCTA{
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.HomeBtn{
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: "Source Serif 4", serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  background: rgba(255,255,255,0.92);
+  color: #111;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+.HomeBtn:hover{
+  filter: brightness(0.98);
+}
+
+.HomeBtn.Ghost{
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+}
+
+/* Tighten intro section spacing a bit */
+.HomeIntro{
+  margin-top: 3.2rem;
+  margin-bottom: 4rem;
+}

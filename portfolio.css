@@ -1,84 +1,182 @@
+/* portfolio.css — Space-lab vibe, harmonised with project page
+   Assumes base.css is loaded first */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
-
-p {
-	font-size: 18px;
-	margin: 5px 5px;
-	line-height: 22.4px;
-	color: #323232;
+/* ---------------- Typography ---------------- */
+.ChartCard,
+.chart-description,
+.ButtonRow,
+.ChartNote{
+  font-family: "Source Serif 4", serif;
+  color: #111;
 }
 
-h1 {
-	font-family: "Catamaran";
-	font-variant: small-caps;
-	font-size: 60px;
-	color: #320064;
-	font-weight: 900;
-	margin: 0px 0px 30px 0px;
-	text-align: center;
+.ChartCard p,
+.chart-description p,
+.ChartNote{
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin: 0.4rem 0 0.9rem;
+  color: rgba(0,0,0,0.78);
 }
 
-ChartGrid {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 24px;
-	justify-content: center;
-	padding: 24px;
+/* Portfolio headings (do NOT override hero h1 from base.css) */
+.WeekTitle{
+  font-family: "Source Serif 4", serif;
+  font-weight: 700;
+  font-size: 1.55rem;            /* slightly bigger for readability */
+  margin: 0 0 0.9rem 0;
+  letter-spacing: 0.02em;
+  color: #0c2a3a;
 }
 
-.ChartCard {
-	width: 400px;
-	background: white;
-	border: 6px solid #b8c7d1;
-	border-radius: 14px;
-	padding:18px;
-	box-sizing:border-box;
-	margin: 0 auto
+section{ margin: 0; }
+
+/* ---------------- Space background for portfolio sections ---------------- */
+/* Applies the “space stage” to sections that contain chart grids */
+section:has(.ChartGrid),
+section:has(.ChartGrid6),
+section:has(.DashboardGrid6),
+section:has(.ButtonRow){
+  position: relative;
+  background: url("space.jpg") center/cover fixed no-repeat;
+  padding: 3.5rem 0;
 }
 
-.WeekTitle {
-	margin: 0 0 10px 0;
-	font-size:28px;
-	font-weight: 700;
-	color: #007185
+/* Overlay tint so background doesn't fight charts */
+section:has(.ChartGrid)::before,
+section:has(.ChartGrid6)::before,
+section:has(.DashboardGrid6)::before,
+section:has(.ButtonRow)::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.40);
+  pointer-events:none;
 }
 
-.ChartFrame {
-	width: 100%;
-	padding: 8px 8px 8px 4px;
-	border: 1px solid #e6e6e6;
-	border-radius: 6px;
-	background: #fff;
-	overflow:hidden;
+/* Make sure content sits above overlay */
+section:has(.ChartGrid) > *,
+section:has(.ChartGrid6) > *,
+section:has(.DashboardGrid6) > *,
+section:has(.ButtonRow) > *{
+  position: relative;
+  z-index: 1;
 }
 
-.ChartFrame figure {
-	margin: 0;
-	margin-left: -12px
+/* ---------------- Main chart layout (2-up like a clean lab wall) ---------------- */
+.ChartGrid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;                      /* a bit more air */
+  max-width: 1320px;              /* wider like project cards */
+  margin: 0 auto;
+  padding: 0 24px;
+  align-items: start;
 }
 
-section {
-	margin-bottom: 40px;
+@media (max-width: 1100px){
+  .ChartGrid{ grid-template-columns: 1fr; }
 }
 
-.ChartImage {
+/* Legacy 3x2 grid class (if used elsewhere) */
+.ChartGrid6{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------------- Cards (project-like, big enough for writing) ---------------- */
+.ChartCard{
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  border-radius: 22px;
+  padding: 2.4rem 2.6rem;         /* BIGGER boxes like Project page */
+  box-shadow: 0 22px 70px rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.40);
+  transition: transform 180ms ease;
+  box-sizing: border-box;
+}
+
+.ChartCard:hover{ transform: translateY(-2px); }
+
+/* Notes */
+.ChartNote{
+  margin-top: 10px;
+  font-size: 0.92rem;
+  color: rgba(0,0,0,0.65);
+}
+
+/* ---------------- Chart frame ---------------- */
+.ChartFrame{
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.98);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+/* kill any legacy left skew */
+.ChartFrame figure{
+  margin: 0 !important;
+}
+
+/* --- CENTER + DE-SKEW VEGA EMBEDS (this fixes your “skewed left” issue) --- */
+.ChartFrame .vega-embed{
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.ChartFrame .vega-embed > div{
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.ChartFrame svg,
+.ChartFrame canvas{
+  display: block !important;
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Images in frames */
+.ChartImage{
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 12px;
+  display: block;
 }
 
-.ChartGrid6{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+/* Constrain static images (e.g. Economist JPG) */
+.ChartFrame img.ChartImage{
+  max-height: 420px;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
+/* Optional: slightly tighter padding when the frame is image-only */
+.ChartFrame:has(img.ChartImage){
+  padding: 8px;
+}
+
+/* ---------------- Buttons (space-lab style) ---------------- */
 .ButtonRow{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  margin: 10px 0 16px 0;
 }
 
 .WideBtn{
@@ -87,14 +185,108 @@ section {
   padding: 12px 14px;
   text-align: center;
   text-decoration: none;
-  border-radius: 8px;
-  border: 1px solid #cacac3;
-  background: #edebe1;
-  color: #111111;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.16);
+  color: rgba(255,255,255,0.92);
   font-weight: 600;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(8px);
 }
 
 .WideBtn:hover{
-  filter: brightness(0.98);
+  background: rgba(255,255,255,0.22);
+  color: #fff;
 }
 
+/* Links inside cards */
+.ChartCard a{
+  color: #0c2a3a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(12,42,58,0.25);
+}
+.ChartCard a:hover{
+  border-bottom-color: rgba(12,42,58,0.60);
+}
+
+/* ---------------- DASHBOARD WRAPPER (one frame for many charts) ---------------- */
+.DashboardCard{
+  grid-column: 1 / -1; /* spans full width of the 2-col ChartGrid */
+}
+
+/* One clean frame around the whole dashboard */
+.DashboardFrame{
+  margin-top: 1rem;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.98);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 16px; /* a touch bigger for “lab console” feel */
+  box-sizing: border-box;
+}
+
+/* 3x2 grid inside one framed dashboard (THIS is your Week 4/6 grid) */
+.DashboardGrid6{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Responsive: 3 -> 2 -> 1 */
+@media (max-width: 1100px){
+  .DashboardGrid6{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 700px){
+  .DashboardGrid6{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Each chart slot: subtle lab panel */
+.DashSlot{
+  min-width: 0; /* critical: allows grid to shrink and stay 3x2 */
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(245,248,250,0.85);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.DashSlot figure{ margin: 0 !important; }
+
+/* Week 6 text inside the dashboard card */
+.DashText{
+  margin: 0.25rem 0 0.9rem;
+  color: rgba(0,0,0,0.72);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.DashLinks{ margin-bottom: 0.6rem; }
+
+/* --- FORCE Vega embeds to respect the dashboard grid --- */
+.DashSlot .vega-embed,
+.DashSlot .vega-embed > div,
+.DashSlot .vega-embed details,
+.DashSlot .vega-embed details summary{
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* The actual rendered chart (svg/canvas) should also be fluid */
+.DashSlot svg,
+.DashSlot canvas{
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+/* ---------------- Safety: prevent any accidental horizontal scroll ---------------- */
+html, body{
+  overflow-x: hidden;
+}

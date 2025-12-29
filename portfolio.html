@@ -1,28 +1,26 @@
-
 <!DOCTYPE html>
-<html> 
- 
-<head>    
-    
-    <link rel="stylesheet" href="base.css" />
-<link rel="stylesheet" href="portfolio.css" />
-<title> Hadija's Portfolio </title> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <!-- Fonts (match project page) -->
+  <link href="https://fonts.cdnfonts.com/css/nasalization-2" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="portfolio.css" />
 
-    <style>
-        #ChartGrid {
-            display: flex;
-        }
-        
-    </style>
+  <title>Hadija's Portfolio</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
-
-<body> 
+<body>
 
 <header class="ProjectHero">
   <nav class="TopNav">
@@ -30,286 +28,297 @@
     <a class="active" href="portfolio.html">PORTFOLIO</a>
     <a href="project.html">PROJECT</a>
     <a href="https://github.com/hadija-gulubayli" target="_blank" rel="noopener">GITHUB</a>
+    <a href="blog.html">BLOG</a>
   </nav>
 
   <div class="HeroContent">
     <h1>Portfolio</h1>
-    <p class="HeroSub">
-      PP434 Automated Data Visualization Course, 2024<br>
-      Candidate Number: 39052
-    </p>
   </div>
 </header>
 
+<!-- WHITE INTRO SECTION (like project page) -->
+<section class="project-aims">
+  <p class="lead">
+    This page is a curated collection of my charts for PP434: Automated Data Visualisation for Policymaking (LSE).
+  </p>
+</section>
 
-
-    
-  <!-- WEEK 1 -->
-  <section>
-        <div class="ChartGrid">
-          
-          <div class="ChartCard">
-            <h2 class="WeekTitle"> Week 1: Embedding 1/2</h2>
-
-          <div class = "ChartFrame">
-            <figure id = "Location1"></figure>
-          </div>
-          <p class = "ChartNote"> Source:<a href="https://rdeconomist.github.io/library"> RDeconomist </a>
-          </p>
-        </div>
-  </section>
-
- 
-  <section>
-        <div class="ChartGrid">
-          
-          <div class="ChartCard">
-            <h2 class="WeekTitle"> Week 1: Embedding 2/2</h2>
-
-           <div class = "ChartFrame">
-            <figure id = "Location2"></figure>
-          </div>
-          <p class = "ChartNote"> Source: <a href="https://rdeconomist.github.io/library">RDeconomist </a>
-
-          </p>
-          </div>
-        </div>
-   </section>
-    
-  <!-- WEEK 2 -->
-  <section>
-        <div class="ChartGrid">
-          
-          <div class="ChartCard">
-            <h2 class="WeekTitle"> Week 2: Economics Observatory Charts </h2>
-
-          <div class = "ChartFrame">
-            <figure id = "Location3"></figure>
-          </div>
-          
-          </div>
-        </div>
-   </section>
-
-
-  <section>
-        <div class="ChartGrid">
-          
-          <div class="ChartCard">
-            <h2 class="WeekTitle"> Week 2: Economics Observatory Charts </h2>
-
-          <div class = "ChartFrame">
-            <figure id = "Location4"></figure>
-          </div>
-          
-          </div>
-        </div>
-   </section>
-
-   <!-- WEEK 3 -->
-
-  <section>
-        <div class="ChartGrid">
-          
-          <div class="ChartCard">
-            <h2 class="WeekTitle"> Week 3: The Brexit Debate </h2>
-
-          <div class = "ChartFrame">
-            <figure id = "Location5"></figure>
-          </div>
-          
-          </div>
-        </div>
-        <p>
-
-        </p>
-  </section>
-
-  <section>
-        <div class="ChartGrid">
-          
-          <div class="ChartCard">
-            <h2 class="WeekTitle"> Week 3: The Brexit Debate </h2>
-
-          <div class = "ChartFrame">
-            <figure id = "Location6"></figure>
-          </div>
-          
-          </div>
-        </div>
-        <p>
-          
-        </p>
-  </section>
-
-  <!-- WEEK 4 -->
+<!-- WEEK 1 -->
 <section>
   <div class="ChartGrid">
     <div class="ChartCard">
-      <h2 class="WeekTitle"> Week 4: The Economist Chart </h2>
+      <h2 class="WeekTitle">CC1</h2>
+      <div class="ChartFrame"><figure id="Location1"></figure></div>
+      <p class="ChartNote">Source: <a href="https://rdeconomist.github.io/library" target="_blank" rel="noopener">RDeconomist</a></p>
+    </div>
 
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC1</h2>
+      <div class="ChartFrame"><figure id="Location2"></figure></div>
+      <p class="ChartNote">Source: <a href="https://rdeconomist.github.io/library" target="_blank" rel="noopener">RDeconomist</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- WEEK 2 -->
+<section>
+  <div class="ChartGrid">
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC2: The Economics Observatory</h2>
+      <div class="ChartFrame"><figure id="Location3"></figure></div>
+    </div>
+
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC2: The Economics Observatory</h2>
+      <div class="ChartFrame"><figure id="Location4"></figure></div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEK 3 -->
+<section>
+  <div class="ChartGrid">
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC3: The Brexit Debate</h2>
+
+      <!-- CC3 policy topic (≤25 words) -->
+      <p class="ChartTopic">
+        Did Brexit cause a structural break in the UK economy, or were observed changes driven primarily by longer-term global economic forces?
+      </p>
+
+      <div class="ChartFrame"><figure id="Location5"></figure></div>
+
+      <!-- CC3 commentary (≤25 words) -->
+      <p class="ChartComment">
+        UK imports rise over the long run, with major disruptions linked to global shocks rather than a clear, permanent break around the Brexit referendum.
+      </p>
+    </div>
+
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC3: The Brexit Debate</h2>
+
+      <div class="ChartFrame"><figure id="Location6"></figure></div>
+
+      <!-- CC3 commentary (≤25 words) -->
+      <p class="ChartComment">
+        Sterling’s largest depreciation predates Brexit, suggesting global financial events had a stronger impact than the referendum itself.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- WEEK 4 -->
+<section>
+  <div class="ChartGrid">
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC4: The Economist Chart</h2>
       <div class="ChartFrame">
         <figure id="Location7">
-          <img 
-            src="/Charts/W4.png" 
-            alt="The Economist chart: US birth rates by age of mother"
-            class="ChartImage"
-          >
+          <img src="Charts/W4.png" alt="The Economist chart: US birth rates by age of mother" class="ChartImage">
         </figure>
       </div>
-
     </div>
-  </div>
-</section>
 
-  <!-- Replication -->
-
-  <section>
-  <div class="ChartGrid">
     <div class="ChartCard">
-      <h2 class="WeekTitle"> Week 4: The Replica </h2>
+      <h2 class="WeekTitle">CC4: The Replica</h2>
+      <div class="ChartFrame"><figure id="Location8"></figure></div>
+    </div>
+  </div>
+</section>
 
-      <div class="ChartFrame">
-        <figure id="Location8">
-        </figure>
+<!-- WEEK 4 Improvement — ONE framed dashboard -->
+<section>
+  <div class="ChartGrid">
+    <div class="ChartCard DashboardCard">
+      <h2 class="WeekTitle">CC4: Improvement (Small Multiples)</h2>
+
+      <div class="DashboardFrame">
+        <div class="DashboardGrid6">
+          <div class="DashSlot"><figure id="Age15_19"></figure></div>
+          <div class="DashSlot"><figure id="Age20_24"></figure></div>
+          <div class="DashSlot"><figure id="Age25_29"></figure></div>
+          <div class="DashSlot"><figure id="Age30_34"></figure></div>
+          <div class="DashSlot"><figure id="Age35_39"></figure></div>
+          <div class="DashSlot"><figure id="Age40_44"></figure></div>
+        </div>
       </div>
+
+      <p class="ChartNote">
+        I split the original multi-line chart into a small-multiples dashboard and simplified titles, improving readability.
+      </p>
 
     </div>
   </div>
 </section>
 
-<!-- Improvement -->
-<section>
-  <div class="ChartGrid6">
-    <div class="ChartCard"><figure id="Age15_19"></figure></div>
-    <div class="ChartCard"><figure id="Age20_24"></figure></div>
-    <div class="ChartCard"><figure id="Age25_29"></figure></div>
-    <div class="ChartCard"><figure id="Age30_34"></figure></div>
-    <div class="ChartCard"><figure id="Age35_39"></figure></div>
-    <div class="ChartCard"><figure id="Age40_44"></figure></div>
-  </div>
-</section>
 
 <!-- WEEK 5 -->
-
-  <section>
-        <div class="ChartGrid">
-          
-          <div class="ChartCard">
-            <h2 class="WeekTitle"> Week 5: Live Chart </h2>
-
-          <div class = "ChartFrame">
-            <figure id = "Location9"></figure>
-          </div>
-          
-          </div>
-        </div>
-        <p>
-          
-        </p>
-  </section>
-
-  <section>
-    <div class="ButtonRow">
-  <a class="WideBtn" href="https://colab.research.google.com/drive/1i2lkpK5kGESaK8xe-h8Ivl2fB3E3KiUi" target="_blank" rel="noopener"> Scraper Link</a>
-  <a class="WideBtn" href="https://colab.research.google.com/drive/1gL6GHMU09SpoQGWUhmJ7pUATiEwcF7WQ#scrollTo=jMlzQJad5cu_" target="_blank" rel="noopener"> Data Cleaning Link</a>
-  <a class="WideBtn" href="https://colab.research.google.com/drive/1JfkZMa9C4PdWl7K1Gw4Vynk6pLQ7QQOk#scrollTo=JAsyWciX6BPa" target="_blank" rel="noopener">Link to the Yearly Launches Sub-Dataset Adaptation</a>
-</div>
-
-  </section>
 <section>
-    <div class="chart-description">
-        <h1> Scraped Chart </h1>
+  <div class="ChartGrid">
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC5: Live Chart</h2>
+      <div class="ChartFrame"><figure id="Location9"></figure></div>
+      <p class="ChartNote">
+<b>API:</b> World Bank Indicators API.<br>
+<b>Base URL:</b> https://api.worldbank.org/v2/<br>
+<b>Endpoint pattern:</b> country/{country}/indicator/{indicator}?format=json&per_page=1000&date=YYYY:YYYY<br>
+<b>Parameters used:</b> country=KOR; indicator=SP.DYN.LE00.IN; format=json; per_page=1000; date=1990:2023.<br>
+<b>Final URL:</b> https://api.worldbank.org/v2/country/KOR/indicator/SP.DYN.LE00.IN?format=json&per_page=1000&date=1990:2023
+</p>
+
     </div>
-  <figure id="Location10"></figure>
+  </div>
 </section>
 
-<!-- WEEK 6 -->
 <section>
-  <div class="chart-description">
-    <h1> Week 6: Loops </h1>
-  </div>
+  <div class="ChartGrid">
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC5: Scraper Task</h2>
 
-  <div class="chart-description">
-    <p>
-      This dashboard uses the FRED API. I batch-downloaded six time-series as JSON files using a Python loop (Google Colab),
-      saved them to GitHub, and then embedded six small charts using a JavaScript loop.
-    </p>
+      <div class="ChartFrame">
+        <figure id="Location10"></figure>
+      </div>
 
-    <a class="WideBtn" href="https://colab.research.google.com/drive/16-MY4W3-ZcUhnpSeVeWQb9SAO-6HkIPN" target="_blank" rel="noopener">
-      API and cleaning code (Google Colab)
-    </a>
-  </div>
+      <!-- ≤25 words commentary -->
+      <p class="ChartNote">
+        Scraped UNOOSA’s object registry, cleaned inconsistent country names and dates, reshaped to tidy yearly counts.
+      </p>
 
-  <!-- 3x2 grid container for the six charts -->
-  <div class="ChartGrid6">
-    <div class="ChartCard"><figure id="Location11"></figure></div>
-    <div class="ChartCard"><figure id="Location12"></figure></div>
-    <div class="ChartCard"><figure id="Location13"></figure></div>
-    <div class="ChartCard"><figure id="Location14"></figure></div>
-    <div class="ChartCard"><figure id="Location15"></figure></div>
-    <div class="ChartCard"><figure id="Location16"></figure></div>
+      <!-- Colab links -->
+      <div class="ButtonRow">
+        <a class="WideBtn"
+           href="https://colab.research.google.com/drive/1i2lkpK5kGESaK8xe-h8Ivl2fB3E3KiUi?usp=sharing"
+           target="_blank"
+           rel="noopener">
+          Scraper (Google Colab)
+        </a>
+
+        <a class="WideBtn"
+           href="https://colab.research.google.com/drive/1gL6GHMU09SpoQGWUhmJ7pUATiEwcF7WQ?usp=sharing"
+           target="_blank"
+           rel="noopener">
+          Data Cleaning & Master Df 
+        </a>
+
+         <a class="WideBtn"
+           href="https://colab.research.google.com/drive/1JfkZMa9C4PdWl7K1Gw4Vynk6pLQ7QQOk?usp=sharing"
+           target="_blank"
+           rel="noopener">
+          Yearly Launches Colab
+        </a>
+
+      </div>
+
+    </div>
   </div>
 </section>
 
+<!-- WEEK 6 — ONE framed dashboard -->
+<section>
+  <div class="ChartGrid">
+    <div class="ChartCard DashboardCard">
+      <h2 class="WeekTitle">CC6: Loops (Dashboard)</h2>
 
+      <p class="DashText">
+        This dashboard uses the FRED API. I batch-downloaded six time-series as JSON files using a Python loop (Colab),
+        saved them to GitHub, and embedded the charts using a JavaScript loop.
+      </p>
+
+      <div class="DashLinks">
+        <a class="WideBtn" href="https://colab.research.google.com/drive/16-MY4W3-ZcUhnpSeVeWQb9SAO-6HkIPN" target="_blank" rel="noopener">
+          API and Loop
+        </a>
+      </div>
+
+      <div class="DashboardFrame">
+        <div class="DashboardGrid6">
+          <div class="DashSlot"><figure id="Location11"></figure></div>
+          <div class="DashSlot"><figure id="Location12"></figure></div>
+          <div class="DashSlot"><figure id="Location13"></figure></div>
+          <div class="DashSlot"><figure id="Location14"></figure></div>
+          <div class="DashSlot"><figure id="Location15"></figure></div>
+          <div class="DashSlot"><figure id="Location16"></figure></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- WEEK 7 -->
 <section>
-  <div class="chart-description">
-    <h1> Week 7: Maps </h1>
-  </div>
-
-  <div style="display: flex; gap: 24px; align-items: flex-start;">
-    
-    <div style="flex: 1;">
-      <h2> Choropleth Map of Wales </h2>
-      <figure id="Location17"></figure>
+  <div class="ChartGrid">
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC7: Choropleth Map of Wales</h2>
+      <div class="ChartFrame"><figure id="Location17"></figure></div>
     </div>
 
-    <div style="flex: 1;">
-      <h2> Coordinates Map of Scotland </h2>
-      <figure id="Location18"></figure>
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC7: Coordinates Map of Scotland</h2>
+      <div class="ChartFrame"><figure id="Location18"></figure></div>
     </div>
-
   </div>
 </section>
 
-
-<!--WEEK 8-->
+<!-- WEEK 8 -->
 <section>
-  <div class="chart-description">
-    <h1> Week 8: Big Data </h1>
-  </div>
-
-  <div style="display: flex; gap: 24px; align-items: flex-start;"></div>
-    
-    <div style="flex: 1;">
-      <h2> Butter Prices </h2>
-      <figure id="Location19"></figure>
+  <div class="ChartGrid">
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC8: Butter Prices</h2>
+      <div class="ChartFrame"><figure id="Location19"></figure></div>
     </div>
 
-    <div style="flex: 1;">
-      <h2> Olive Oil Price Distribution (2022) </h2>
-      <figure id="Location21"></figure>
-    </div>
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC8: Olive Oil Price Distribution (2022)</h2>
+      <div class="ChartFrame"><figure id="Location21"></figure></div>
+      <p class="ChartNote">
+Using AutoCPI data (Davies &amp; McElvoy, 2024), I chart olive oil prices over time and show a 2022 butter price distribution across major UK supermarkets.
+</p>
 
+    </div>
   </div>
 </section>
 
 <!-- WEEK 9 -->
-
 <section>
-  <div class="chart-description">
-    <h1> Week 9: Interactivity </h1>
-  </div>
-
-      <h2> House Price Index (HPI) </h2>
-      <figure id="Location20"></figure>
+  <div class="ChartGrid">
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC9: Interactivity </h2>
+      <div class="ChartFrame"><figure id="Location20"></figure></div>
     </div>
 
-      <h2>  </h2>
-      <figure id="Location22"></figure>
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC9: Interactivity</h2>
+      <div class="ChartFrame"><figure id="Location22"></figure></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="ChartGrid">
+
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC10: Female Life Expectancy</h2>
+
+      <p class="ChartNote">
+        Higher income deprivation is associated with lower male and female life expectancy across Glasgow neighbourhoods.
+      </p>
+
+  
+
+      <div class="ChartFrame">
+        <figure id="Location23"></figure>
+      </div>
+
+    </div>
+
+    <div class="ChartCard">
+      <h2 class="WeekTitle">CC10: Male Life Expectancy</h2>
+      <div class="ChartFrame">
+        <figure id="Location24"></figure>
+      </div>
+                <p class="ChartNote">
+        Income deprivation is a statistical predictor of life expectancy across both genders, but remaining unexplained variation suggests deprivation alone cannot fully account for the Glasgow Effect.
+      </p>
     </div>
 
   </div>
@@ -317,122 +326,81 @@
 
 
 
+<script>
+  // Specs
+  const figure_1_spec  = "Charts/W1_Populations.json";
+  const figure_2_spec  = "Charts/W1_Bitcoin.json";
+  const figure_3_spec  = "Charts/W2_Russia.json";
+  const figure_4_spec  = "Charts/W2_GDP.json";
+  const figure_5_spec  = "Charts/W3_pounds.json";
+  const figure_6_spec  = "Charts/W3_imports.json";
+  const figure_8_spec  = "Charts/W4_replica.json";
+  const figure_9_spec  = "Charts/W5_Worldbank.json";
+  const figure_10_spec = "Project/yearly_launch.json";
+  const figure_17_spec = "Charts/W7_Wales.json";
+  const figure_18_spec = "Charts/W7_Scotland.json";
+  const figure_19_spec = "Data/butter.json";
+  const figure_20_spec = "Data/house_prices.json";
+  const figure_21_spec = "Charts/W8_Olive.json";
+  const figure_22_spec = "Project/orbit.json";
+  const figure_23_spec = "Charts/W9_female_reg.json";
+  const figure_24_spec = "Charts/W9_male_reg.json";
 
+  // Embeds
+  vegaEmbed("#Location1", figure_1_spec);
+  vegaEmbed("#Location2", figure_2_spec);
 
+  vegaEmbed("#Location3", figure_3_spec);
+  vegaEmbed("#Location4", figure_4_spec);
 
+  vegaEmbed("#Location5", figure_5_spec);
+  vegaEmbed("#Location6", figure_6_spec);
 
+  vegaEmbed("#Location8", figure_8_spec);
+  vegaEmbed("#Location9", figure_9_spec);
 
+  vegaEmbed("#Location10", figure_10_spec);
 
-  
+  vegaEmbed("#Location17", figure_17_spec);
+  vegaEmbed("#Location18", figure_18_spec);
 
-    <script>
+  vegaEmbed("#Location19", figure_19_spec);
+  vegaEmbed("#Location21", figure_21_spec);
 
-        let figure_1_spec = "Charts/W1_Populations.json"; 
-        let figure_2_spec = "Charts/W1_Bitcoin.json";
-        let figure_3_spec = "Charts/W2_Russia.json";
-        let figure_4_spec = "Charts/W2_GDP.json";
-        let figure_5_spec = "Charts/W3_pounds.json";
-        let figure_6_spec = "Charts/W3_imports.json";
-        let figure_7_spec = "W4.png";
-        let figure_8_spec = "Charts/W4_replica.json";
-        let figure_9_spec = "Charts/W5_Worldbank.json";
-        let figure_10_spec = "Project/yearly_launch.json";
-        let figure_17_spec = "Charts/W7_Wales.json";
-        let figure_18_spec = "Charts/W7_Scotland.json";
-        let figure_19_spec = "Data/butter.json";
-        let figure_20_spec = "Data/house_prices.json"
-        let figure_21_spec = "Charts/W8_Olive.json"
-        let figure_22_spec = "Project/orbit.json"
+  vegaEmbed("#Location20", figure_20_spec);
+  vegaEmbed("#Location22", figure_22_spec);
 
-        
-        // Week 1 Charts
-        vegaEmbed('#Location1', figure_1_spec)
-        vegaEmbed('#Location2', figure_2_spec)
+  vegaEmbed("#Location23", figure_23_spec);
+  vegaEmbed("#Location24", figure_24_spec);
 
-        // Week 2 Charts
-        vegaEmbed('#Location3', figure_3_spec)
-        vegaEmbed('#Location4', figure_4_spec)
+  // Week 4 improvement dashboard (age small multiples)
+  const ages = [
+    ["Age15_19", "15-19"],
+    ["Age20_24", "20-24"],
+    ["Age25_29", "25-29"],
+    ["Age30_34", "30-34"],
+    ["Age35_39", "35-39"],
+    ["Age40_44", "40-44"]
+  ];
 
-        // Week 3 Charts
-        vegaEmbed('#Location5', figure_5_spec)
-        vegaEmbed('#Location6', figure_6_spec)  
-
-        // Week 4 Charts
-        vegaEmbed('#Location8', figure_8_spec)
-        vegaEmbed('#Location9', figure_9_spec)
-
-
-const ages = [
-  ["Age15_19", "15-19"],
-  ["Age20_24", "20-24"],
-  ["Age25_29", "25-29"],
-  ["Age30_34", "30-34"],
-  ["Age35_39", "35-39"],
-  ["Age40_44", "40-44"]
-];
-
-async function buildDashboard() {
-  const baseSpec = await fetch("charts/cc4_age_small.json").then(r => r.json());
-
-  for (const [id, age] of ages) {
-    // Deep clone so each chart is independent
-    const spec = JSON.parse(JSON.stringify(baseSpec));
-
-    // Hard set the filter for this chart
-    spec.transform = [{ filter: `datum.age_group == '${age}'` }];
-
-    // Make the title simply the age group (clean & reliable)
-    spec.title = spec.title || {};
-    spec.title.text = age;
-
-    await vegaEmbed(`#${id}`, spec, { actions: false });
+  async function buildDashboard() {
+    const baseSpec = await fetch("Charts/cc4_age_small.json").then(r => r.json());
+    for (const [id, age] of ages) {
+      const spec = JSON.parse(JSON.stringify(baseSpec));
+      spec.transform = [{ filter: `datum.age_group == '${age}'` }];
+      spec.title = spec.title || {};
+      spec.title.text = age;
+      await vegaEmbed(`#${id}`, spec, { actions: false });
+    }
   }
-}
+  buildDashboard();
 
-buildDashboard();
-
-
-
-
-       // Week 5 Chart
-        vegaEmbed('#Location10', figure_10_spec)
-
-
-       // Week 7 Maps
-        vegaEmbed('#Location17', figure_17_spec)
-        vegaEmbed('#Location18', figure_18_spec)
-
-
-        // Week 8 Big Data 
-        vegaEmbed('#Location19', figure_19_spec)
-        vegaEmbed('#Location21', figure_21_spec)
-
-
-        // Week 9 Interactivity
-        vegaEmbed('#Location20', figure_20_spec)
-        vegaEmbed('#Location22', figure_22_spec)
-
-
-    </script>
-
-<section>
-</div>
-
-<!-- LOOP -->
- <script>
-  let templateSpec = {
-    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-    "title": {
-      "text": "",
-      "subtitle": ["",""],
-      "anchor": "middle",
-      "color": "black"
-    },
+  // Week 6 loop dashboard (FRED small multiples)
+  const templateSpec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "", "subtitle": ["",""], "anchor": "middle", "color": "black" },
     "view": {"stroke": "transparent"},
-    "data": {
-      "url": "",
-      "format": {"type": "json", "property": "observations"}
-    },
+    "data": { "url": "", "format": {"type": "json", "property": "observations"} },
     "transform": [
       {"calculate":"year(datum.date)", "as": "year"},
       {"filter": "datum.year >= 2000"}
@@ -446,7 +414,7 @@ buildDashboard();
     }
   };
 
-  let chartFiles = [
+  const chartFiles = [
     "Fred_space/data_US_FRED-LEU0254534400A.json",
     "Fred_space/data_US_FRED-LEU0254694600A.json",
     "Fred_space/data_US_FRED-LEU0254748000A.json",
@@ -455,7 +423,7 @@ buildDashboard();
     "Fred_space/data_US_FRED-W595RZ2A224NBEA.json"
   ];
 
-  let chartTitles = [
+  const chartTitles = [
     "Space Scientists Weekly Earnings (Median)",
     "The Number of Women Space Scientists",
     "Women Space Scientists Weekly Earnings",
@@ -464,22 +432,16 @@ buildDashboard();
     "% change in Government Space Expenditures"
   ];
 
-  let baseUrl = "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/main/";
+  const baseUrl = "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/main/";
 
   for (let i = 0; i < chartFiles.length; i++) {
-    let url = baseUrl + chartFiles[i];
-
-    let spec = JSON.parse(JSON.stringify(templateSpec));
+    const url = baseUrl + chartFiles[i];
+    const spec = JSON.parse(JSON.stringify(templateSpec));
     spec.data.url = url;
     spec.title.text = chartTitles[i];
-
     vegaEmbed(`#Location${i + 11}`, spec, { actions: false });
   }
 </script>
 
-  
-  </section>
-
 </body>
-
 </html>
