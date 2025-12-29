@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Mobile Connectivity and LEO Launch Activity",
+    "subtitle": [
+      "Major space powers highlighted.",
+      "Mobile subscriptions per 100 people (World Bank) vs LEO launches (UNOOSA)."
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "start",
+    "offset": 10,
+    "color": "black",
+    "fontSize": 14
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/leo_mobile_panel.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "year_select",
+      "value": 2022,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2023,
+        "step": 1,
+        "name": "Year: "
+      }
+    },
+    {
+      "name": "hover",
+      "select": {"type": "point", "on": "mouseover", "clear": "mouseout"}
+    }
+  ],
+  "transform": [
+    {"filter": "datum.year == year_select"},
+    {
+      "calculate": "indexof(['United States','China','Russian Federation','France', 'United Kingdom','Japan', 'India'], datum.country) >= 0",
+      "as": "is_major"
+    },
+    {"filter": "datum.leo_launches > 0"}
+  ],
+  "mark": {"type": "circle", "stroke": "#000000df", "strokeWidth": 0.8},
+  "width": 520,
+  "height": 360,
+  "encoding": {
+    "x": {
+      "field": "mobile_subscriptions",
+      "type": "quantitative",
+      "title": "Mobile subscriptions (per 100 people)",
+      "scale": {"domain": [0, 220]},
+      "axis": {
+        "gridOpacity": 0.3,
+        "ticks": false,
+        "labelFontSize": 11,
+        "labelPadding": 5,
+        "titleFontWeight": "bold",
+        "titlePadding": 6
+      }
+    },
+    "y": {
+      "field": "leo_launches",
+      "type": "quantitative",
+      "title": "LEO launches (log)",
+      "scale": {"type": "log", "domainMin": 1},
+      "axis": {
+        "gridOpacity": 0.3,
+        "ticks": false,
+        "labelFontSize": 11,
+        "labelPadding": 5,
+        "titleFontWeight": "bold",
+        "titlePadding": 6
+      }
+    },
+    "color": {
+      "condition": {"test": "datum.is_major", "value": "#00bfa5"},
+      "value": "#1f77b4",
+      "legend": null
+    },
+    "size": {
+      "condition": {"test": "datum.is_major", "value": 260},
+      "value": 120
+    },
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.15},
+    "tooltip": [
+      {"field": "country", "title": "Country"},
+      {"field": "year", "type": "quantitative", "title": "Year"},
+      {
+        "field": "mobile_subscriptions",
+        "type": "quantitative",
+        "title": "Mobile subscriptions",
+        "format": ".1f"
+      },
+      {
+        "field": "leo_launches",
+        "type": "quantitative",
+        "title": "LEO launches",
+        "format": ",d"
+      }
+    ]
+  },
+  "config": {"view": {"stroke": "transparent"}}
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Active Objects by Orbital Regime",
+    "subtitle": "UNOOSA | Major space powers vs rest of the world",
+    "anchor": "start"
+  },
+  "width": 550,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/unoosa_active_orbit_composition_top15.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "groupView",
+      "value": "Major space powers",
+      "bind": {
+        "input": "select",
+        "options": ["Major space powers", "Other countries"],
+        "name": "View: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "indexof(['United States','Russian Federation','China','United Kingdom','France'], datum.country) >= 0 ? 'Major' : 'Other'",
+      "as": "country_group"
+    },
+    {
+      "filter": "(groupView == 'Major space powers' && datum.country_group == 'Major') || (groupView == 'Other countries' && datum.country_group == 'Other')"
+    }
+  ],
+  "mark": {"type": "bar", "orient": "horizontal"},
+  "encoding": {
+    "y": {"field": "country", "type": "nominal", "sort": "-x", "title": null},
+    "x": {
+      "aggregate": "sum",
+      "field": "active_objects",
+      "type": "quantitative",
+      "title": "Number of active space objects"
+    },
+    "color": {
+      "field": "orbit_class",
+      "type": "nominal",
+      "title": "Orbital regime",
+      "scale": {
+        "domain": ["LEO", "MEO", "GEO", "Other"],
+        "range": ["#2f4cb8", "#8faeff", "#1b2f6b", "#d9d4ff"]
+      }
+    },
+    "tooltip": [
+      {"field": "country", "type": "nominal", "title": "Country"},
+      {"field": "orbit_class", "type": "nominal", "title": "Orbit class"},
+      {
+        "aggregate": "sum",
+        "field": "active_objects",
+        "type": "quantitative",
+        "title": "Active objects"
+      }
+    ]
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"labelFontSize": 11, "titleFontSize": 12},
+    "legend": {"labelFontSize": 11, "titleFontSize": 12}
+  }
+}
