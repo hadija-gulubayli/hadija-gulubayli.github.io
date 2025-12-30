@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Active Space Objects by Orbital Regime",
-    "subtitle": "UNOOSA (cleaned) | Major space powers vs rest of the world",
+    "text": "Active Objects by Orbital Regime",
+    "subtitle": "UNOOSA | Major space powers vs rest of the world",
     "anchor": "start"
   },
-  "width": 700,
-  "height": 420,
+  "width": 550,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/unoosa_active_orbit_composition_top15.csv",
     "format": {"type": "csv"}
@@ -46,7 +46,7 @@
       "title": "Orbital regime",
       "scale": {
         "domain": ["LEO", "MEO", "GEO", "Other"],
-        "range": ["#243f66", "#3f5f86", "#6f89a8", "#d7dde5"]
+        "range": ["#2f4cb8", "#8faeff", "#1b2f6b", "#d9d4ff"]
       }
     },
     "tooltip": [

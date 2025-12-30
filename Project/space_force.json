@@ -3,27 +3,27 @@
   "title": {
     "text": "Tracked objects in orbit, by type",
     "subtitle": [
-      "U.S. Space Force SATCAT (Space-Track API): objects counted from launch until atmospheric re-entry."
+      "U.S. Space Force | objects counted from launch until atmospheric re-entry."
     ],
     "anchor": "start"
   },
   "width": 500,
-  "height": 350,
-  "autosize": {"type": "fit", "contains": "padding"},
+  "height": 370,
+  "autosize": { "type": "fit", "contains": "padding" },
   "data": {
     "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/main/Data/space_objects_by_type_timeseries.csv",
-    "format": {"type": "csv"}
+    "format": { "type": "csv" }
   },
   "transform": [
-    {"calculate": "toDate(datum.Year + '-01-01')", "as": "YearDate"}
+    { "calculate": "toDate(datum.Year + '-01-01')", "as": "YearDate" }
   ],
-  "mark": {"type": "area"},
+  "mark": { "type": "area" },
   "encoding": {
     "x": {
       "field": "YearDate",
       "type": "temporal",
       "title": null,
-      "axis": {"format": "%Y"}
+      "axis": { "format": "%Y" }
     },
     "y": {
       "field": "Objects",
@@ -35,11 +35,15 @@
       "field": "Object type",
       "type": "nominal",
       "title": null,
-      "sort": ["Rocket bodies", "Payloads", "Debris"]
+      "sort": ["Rocket bodies", "Payloads", "Debris"],
+      "scale": {
+        "domain": ["Rocket bodies", "Payloads", "Debris"],
+        "range": ["#1f77b4", "#060661", "#00bfa5"]
+      }
     },
     "tooltip": [
-      {"field": "Year", "type": "quantitative", "title": "Year"},
-      {"field": "Object type", "type": "nominal", "title": "Type"},
+      { "field": "Year", "type": "quantitative", "title": "Year" },
+      { "field": "Object type", "type": "nominal", "title": "Type" },
       {
         "field": "Objects",
         "type": "quantitative",
@@ -49,7 +53,7 @@
     ]
   },
   "config": {
-    "view": {"stroke": null},
-    "legend": {"orient": "top", "direction": "horizontal"}
+    "view": { "stroke": null },
+    "legend": { "orient": "top", "direction": "horizontal" }
   }
 }

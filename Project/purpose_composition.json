@@ -5,12 +5,23 @@
     "subtitle": "Top 50 countries | Shares within country ",
     "anchor": "start"
   },
-  "width": 720,
-  "height": 520,
+  "width": 420,
+  "height": 420,
   "data": {
     "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/unoosa_active_purpose_composition_top50.csv",
     "format": {"type": "csv"}
   },
+  "params": [
+  {
+    "name": "hoverCountry",
+    "select": {
+      "type": "point",
+      "fields": ["country"],
+      "on": "mouseover",
+      "clear": "mouseout"
+    }
+  }
+],
   "transform": [
     {
       "joinaggregate": [
@@ -36,11 +47,28 @@
       "axis": {"format": "%"},
       "scale": {"domain": [0, 1]}
     },
-    "color": {
-      "field": "purpose_class",
-      "type": "nominal",
-      "title": "Mission purpose"
-    },
+    "opacity": {
+  "condition": {
+    "param": "hoverCountry",
+    "value": 1
+  },
+  "value": 0.15
+},
+ "color": {
+  "field": "purpose_class",
+  "type": "nominal",
+  "title": "Mission purpose",
+  "scale": {
+   "range": [
+  "#8ECAE6",  
+  "#219EBC", 
+  "#3A5BA0",  
+  "#6A4C93", 
+  "#C77D00",  
+  "#6C757D"   
+]
+  }
+},
     "tooltip": [
       {"field": "country", "type": "nominal", "title": "Country"},
       {"field": "purpose_class", "type": "nominal", "title": "Purpose"},

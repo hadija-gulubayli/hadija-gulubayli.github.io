@@ -1,55 +1,69 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Cost of space launches to low Earth orbit",
+    "text": "Cost of Space Launches to Low Earth Orbit (LEO)",
     "subtitle": [
       "Launch cost per kilogram of payload at first successful launch.",
-      "Constant 2021 US$; logarithmic scale. Source: CSIS (2022) via Our World in Data."
+      "Source: CSIS (2022)"
     ],
     "anchor": "start"
   },
-  "width": 350,
-  "height": 350,
-  "autosize": {"type": "fit", "contains": "padding"},
+  "width": 500,
+  "height": 370,
+  "autosize": { "type": "fit", "contains": "padding" },
   "data": {
     "url": "https://raw.githubusercontent.com/hadija-gulubayli/hadija-gulubayli.github.io/refs/heads/main/Data/leo_space_costs.csv",
-    "format": {"type": "csv"}
+    "format": { "type": "csv" }
   },
-  "mark": {"type": "circle", "size": 90, "opacity": 0.85},
+  "mark": { "type": "circle", "size": 90, "opacity": 0.85 },
   "encoding": {
     "x": {
       "field": "Year",
       "type": "quantitative",
       "title": "Year of first successful launch",
-      "scale": {"domain": [1958, 2021]},
-      "axis": {"tickCount": 8, "format": "d"}
+      "scale": { "domain": [1958, 2021] },
+      "axis": { "tickCount": 8, "format": "d" }
     },
     "y": {
       "field": "Launch cost per kilogram of payload",
       "type": "quantitative",
       "title": "Cost per kg (log scale, 2021 US$)",
-      "scale": {"type": "log", "domain": [1000, 300000]}
+      "scale": { "type": "log", "domain": [1000, 300000] }
+    },
+    "size": {
+      "condition": { "param": "hover", "value": 110 },
+      "value": 90
     },
     "color": {
       "field": "Launch vehicle class",
       "type": "nominal",
       "title": "Payload class",
-      "sort": ["Small", "Medium", "Heavy"]
+      "sort": ["Small", "Medium", "Heavy"],
+      "scale": {
+        "domain": ["Small", "Medium", "Heavy"],
+        "range": ["#2f4cb8", "#8faeff",  "#C77D00"]
+      }
     },
     "tooltip": [
-      {"field": "Entity", "type": "nominal", "title": "Launch vehicle"},
-      {"field": "Year", "type": "quantitative", "format": "d"},
+      { "field": "Entity", "type": "nominal", "title": "Launch vehicle" },
+      { "field": "Year", "type": "quantitative", "format": "d" },
       {
         "field": "Launch cost per kilogram of payload",
         "type": "quantitative",
         "title": "Cost per kg (2021 US$)",
         "format": ","
       },
-      {"field": "Launch vehicle class", "type": "nominal", "title": "Class"}
+      { "field": "Launch vehicle class", "type": "nominal", "title": "Class" }
     ]
   },
+  "params": [
+    {
+      "name": "hover",
+      "select": { "type": "point", "on": "mouseover", "clear": "mouseout" }
+    }
+  ],
   "config": {
-    "view": {"stroke": null},
-    "legend": {"orient": "top", "direction": "horizontal"}
+    "view": { "stroke": null },
+    "legend": { "orient": "right", "direction": "vertical" }
   }
 }

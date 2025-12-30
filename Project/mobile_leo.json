@@ -37,12 +37,12 @@
   "transform": [
     {"filter": "datum.year == year_select"},
     {
-      "calculate": "indexof(['United States','China','Russia','France'], datum.country) >= 0",
+      "calculate": "indexof(['United States','China','Russian Federation','France', 'United Kingdom','Japan', 'India'], datum.country) >= 0",
       "as": "is_major"
     },
     {"filter": "datum.leo_launches > 0"}
   ],
-  "mark": {"type": "circle", "stroke": "#000000df", "strokeWidth": 0.5},
+  "mark": {"type": "circle", "stroke": "#000000df", "strokeWidth": 0.8},
   "width": 520,
   "height": 360,
   "encoding": {
@@ -75,8 +75,8 @@
       }
     },
     "color": {
-      "condition": {"test": "datum.is_major", "value": "#e96969"},
-      "value": "#69a8e1",
+      "condition": {"test": "datum.is_major", "value": "#00bfa5"},
+      "value": "#1f77b4",
       "legend": null
     },
     "size": {
@@ -90,7 +90,7 @@
       {
         "field": "mobile_subscriptions",
         "type": "quantitative",
-        "title": "Mobile subscriptions / 100 people",
+        "title": "Mobile subscriptions",
         "format": ".1f"
       },
       {
