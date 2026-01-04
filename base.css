@@ -148,6 +148,7 @@ html, body { margin: 0; padding: 0; }
 
 .space-stage{
   position: relative;
+  overflow: hidden; /* prevents overlay weirdness at edges */
 }
 
 /* White cards */
@@ -252,4 +253,35 @@ html, body { margin: 0; padding: 0; }
   max-width: 720px;
   margin: 0.4rem auto 1rem;
   line-height: 1.4;
+}
+
+.chart-stack{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;            /* breathing room between charts */
+  margin-top: 1.5rem;
+}
+
+/* Force Vega charts to be centered inside their frame */
+.chart-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure Vega itself does not impose left alignment */
+.chart-frame .vega-embed,
+.chart-frame .vega-embed > div,
+.chart-frame svg,
+.chart-frame canvas {
+  margin: 0 auto !important;
+  display: block;
+}
+
+/* Project / section headings */
+.chart-card > h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.01em;
 }
