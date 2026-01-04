@@ -74,15 +74,15 @@
   </p>
 
   <p class="lead">
- The data is scraped from the United Nations Office for Outer Space Affairs (UNOOSA) Register of Objects Launched into Outer Space, comprising 22,374 objects. Registry entries were cleaned and aggregated by launch year and country. Historical entities, supranational organisations, and inconsistent country naming required manual standardisation; with Soviet-era launches attributed to Russia as the recognised successor state; therefore historical accuracy has been sacrificed for practicality.
+ The data is scraped from the United Nations Office for Outer Space Affairs (UNOOSA) Register of Objects Launched into Outer Space, comprising 22,374 objects. Registry entries were cleaned and aggregated by launch year and country. Historical entities, supranational organisations, and inconsistent country naming required manual standardisation; with Soviet-era launches attributed to Russia as the recognised successor state; historical accuracy has been traded off for practicality.
   </p>
 </div>
 
     <div class="card-links">
-      <a href="https://colab.research.google.com/drive/1i2lkpK5kGESaK8xe-h8Ivl2fB3E3KiUi?usp=sharing" target="_blank" rel="noopener">Scraper</a>
-      <a href="https://colab.research.google.com/drive/1gL6GHMU09SpoQGWUhmJ7pUATiEwcF7WQ?usp=sharing" target="_blank" rel="noopener"> Data Cleaning & Master Df</a>
-         <a href="https://colab.research.google.com/drive/1JfkZMa9C4PdWl7K1Gw4Vynk6pLQ7QQOk?usp=sharing" target="_blank" rel="noopener">Yearly Launches</a>
-      <a href="https://github.com/hadija-gulubayli/hadija-gulubayli.github.io/blob/main/Data/unoosa_yearly_launches.csv" target="_blank" rel="noopener"> Github </a>
+      <a href="https://colab.research.google.com/drive/1i2lkpK5kGESaK8xe-h8Ivl2fB3E3KiUi?usp=sharing" target="_blank" rel="noopener">Scraper | Colab</a>
+      <a href="https://colab.research.google.com/drive/1gL6GHMU09SpoQGWUhmJ7pUATiEwcF7WQ?usp=sharing" target="_blank" rel="noopener"> Data Cleaning & Master Dataset | Colab</a>
+         <a href="https://colab.research.google.com/drive/1JfkZMa9C4PdWl7K1Gw4Vynk6pLQ7QQOk?usp=sharing" target="_blank" rel="noopener">Yearly Launches | Colab</a>
+      <a href="https://github.com/hadija-gulubayli/hadija-gulubayli.github.io/blob/main/Data/unoosa_yearly_launches.csv" target="_blank" rel="noopener"> Yearly Launches | Github </a>
     </div>
   </div>
 </section>
@@ -107,59 +107,60 @@
    </p>
 
   <p class="lead">
-According to UNOOSA, around 85% of all satellites, probes, landers ever launched have registered, making it the most comprehensive public source on global launches. The scraped entries were cleaned into a master dataset and further, chart-specific outputs below. For this chart, objects were classified by operational status to distinguish active from inactive (decayed or deorbited) objects, then aggregated by country and matched to ISO codes for geographic lookup.
+According to UNOOSA, around 85% of all satellites, probes, landers ever launched have registered, making it the most comprehensive public source on global launches. The scraped entries were cleaned into a master dataset and further, chart-specific outputs. For this chart, objects were classified by operational status to distinguish active from inactive (decayed or deorbited) objects, then aggregated by country and matched to ISO codes for geographic lookup.
   </p>
 </div>
 
     <div class="card-links">
-      <a href="https://colab.research.google.com/drive/1gL6GHMU09SpoQGWUhmJ7pUATiEwcF7WQ#scrollTo=RbueFhRpSOIY" target="_blank" rel="noopener">Cumulative Launches</a>
-      <a href="https://github.com/hadija-gulubayli/hadija-gulubayli.github.io/blob/main/Data/unoosa_cumulative.csv" target="_blank" rel="noopener"> Github</a>
+      <a href="https://colab.research.google.com/drive/1gL6GHMU09SpoQGWUhmJ7pUATiEwcF7WQ#scrollTo=RbueFhRpSOIY" target="_blank" rel="noopener">Cumulative Launches | Colab</a>
+      <a href="https://github.com/hadija-gulubayli/hadija-gulubayli.github.io/blob/main/Data/unoosa_cumulative.csv" target="_blank" rel="noopener"> Cumulative Launches | Github</a>
     </div>
   </div>
 </section>
 
 
 <!-- 3 Chart Section -->
-<div class="chart-card">
+<section class="space-stage">
+  <div class="chart-card">
 
-  <h2>What Is Being Put into Orbit — and Where?</h2>
+    <h2>What Is Being Put into Orbit — and Where?</h2>
 
-
-  <div class="chart-grid">
-    <div class="chart-frame">
-      <figure id="Project3"></figure>
-    </div>
-
-    <div class="chart-frame">
-      <figure id="Project4"></figure>
-    </div>
+<div class="chart-stack">
+  <div class="chart-frame">
+    <figure id="Project3"></figure>
   </div>
 
-  <div class="project-aims">
-  
-  
-    <p class="lead">
-    The dominance of the U.S in cumulative launches is closely linked to the functional composition of its space activity: 97.2% of its launched objects are communications-related and placed in Low Earth Orbit (LEO). As other countries increasingly adopt similar launch profiles, the risk of the Kessler syndrome rises: a self-sustaining chain reaction in which LEO collisions generate debris that triggers further collisions.
-  </p>
-
-  <p class="lead">
-    Space objects operate across distinct orbital regimes with different functions and congestion risks. LEO supports communications, Earth observation, scientific missions and crewed spaceflight; MEO is primarily used for navigation systems; and GEO hosts communications and weather satellites.
-  </p>
-
-  <p class="lead">
-    Orbit types and mission purposes were derived from the free-text function field in the UNOOSA Scraper using keywords. This reveals the overwhelming concentration of communications missions in LEO, while also highlighting limitations arising from inconsistent free-text reporting, hence the overwhelming classification as “other”.
-  </p>
+  <div class="chart-frame">
+    <figure id="Project4"></figure>
+  </div>
 </div>
 
 
+    <div class="project-aims">
+      <p class="lead">
+        The dominance of the U.S in cumulative launches is closely linked to the functional composition of its space activity: 97.2% of its launched objects are communications-related and placed in Low Earth Orbit (LEO).
+      </p>
 
-  <div class="card-links">
-    <a href="https://colab.research.google.com/drive/1syrZziMm-j8KYKMDYVCp3g9rQKhkbAns#scrollTo=oH6ju4zb1fKE" target="_blank">Colab</a>
-    <a href="https://github.com/hadija-gulubayli/hadija-gulubayli.github.io/blob/main/Data/unoosa_active_orbit_composition_top15.csv" target="_blank">Orbit Data</a>
-    <a href="https://github.com/hadija-gulubayli/hadija-gulubayli.github.io/blob/main/Data/unoosa_active_purpose_composition_top50.csv" target="_blank"> Country Mission Composition Data | Github</a>
+      <p class="lead">
+        Space objects operate across distinct orbital regimes with different functions and congestion risks. LEO supports communications, Earth observation, scientific missions and crewed spaceflight; MEO is primarily used for navigation systems; and GEO hosts communications and weather satellites.
+      </p>
+
+      <p class="lead">
+        Orbit types and mission purposes were derived from the free-text function field in the UNOOSA Scraper using keywords. This reveals the overwhelming concentration of communications missions in LEO, while also highlighting limitations arising from inconsistent free-text reporting.
+      </p>
+    </div>
+
+    
+
+    <div class="card-links">
+      <a href="https://colab.research.google.com/drive/1syrZziMm-j8KYKMDYVCp3g9rQKhkbAns#scrollTo=oH6ju4zb1fKE" target="_blank" rel="noopener">Data Cleaning | Colab</a>
+      <a href="https://github.com/hadija-gulubayli/hadija-gulubayli.github.io/blob/main/Data/unoosa_active_orbit_composition_top15.csv" target="_blank" rel="noopener">Orbit Data | Github</a>
+      <a href="https://github.com/hadija-gulubayli/hadija-gulubayli.github.io/blob/main/Data/unoosa_active_purpose_composition_top50.csv" target="_blank" rel="noopener">Country Mission Data | Github</a>
+    </div>
+
   </div>
+</section>
 
-</div>
 
 
 <!-- 4 Chart Section -->
@@ -201,12 +202,12 @@ According to UNOOSA, around 85% of all satellites, probes, landers ever launched
 
     <div class="project-aims">
       <p class="lead">
-    Data on the composition of objects in orbit were sourced from Space-Track, which provides object-level tracking data via programmatic endpoints derived from the U.S. Space Surveillance Network. The data were downloaded and cleaned to construct time series of payloads, rocket bodies, and debris. The stock of debris has grown cumulatively over decades and remains persistent once created. This reflects both the long-lived nature of orbital debris and the absence of automatic removal mechanisms for inactive objects. As launch activity continues to rise, the parallel growth of debris increases collision probability and raises the risk of cascading effects that could further degrade the usability of congested orbital regions, particularly low Earth orbit. 
+    Data on the composition of objects in orbit were sourced from Space-Track, which provides object-level tracking data via programmatic endpoints derived from the U.S. Space Surveillance Network. The data were downloaded and cleaned to construct time series of payloads, rocket bodies, and debris. The stock of debris has grown cumulatively over decades and remains persistent once created. This reflects both the long-lived nature of orbital debris and the absence of automatic removal mechanisms for inactive objects. As launch activity continues to rise, the parallel growth of debris increases collision probability and raises the risk of cascading effects that could further degrade the usability of congested orbital regions, particularly low Earth orbit (LEO). 
       </p>
     </div>
 
     <div class="card-links">
-      <a href="https://colab.research.google.com/drive/13unu72l1DGNBJ-E7JXj-e5XwB8iPMbYU#scrollTo=Ho93S3DEUqaj" target="_blank" rel="noopener"> Spacetrack API & Data Cleaning </a>
+      <a href="https://colab.research.google.com/drive/13unu72l1DGNBJ-E7JXj-e5XwB8iPMbYU#scrollTo=Ho93S3DEUqaj" target="_blank" rel="noopener"> Spacetrack API & Data Cleaning | Colab </a>
       <a href="https://github.com/hadija-gulubayli/hadija-gulubayli.github.io/blob/main/Data/space_objects_by_type_timeseries.csv" target="_blank" rel="noopener">Debris Data | Github</a>
     </div>
   </div>
@@ -229,7 +230,7 @@ For this chart a country-year panel dataset was created by combining LEO launch 
     </div>
 
     <div class="card-links">
-      <a href="https://colab.research.google.com/drive/1syrZziMm-j8KYKMDYVCp3g9rQKhkbAns" target="_blank" rel="noopener">World Bank API | Data Cleaning</a>
+      <a href="https://colab.research.google.com/drive/1syrZziMm-j8KYKMDYVCp3g9rQKhkbAns" target="_blank" rel="noopener">World Bank API | Data Cleaning | Colab</a>
       <a href="https://github.com/hadija-gulubayli/hadija-gulubayli.github.io/blob/main/Data/leo_mobile_panel.csv" target="_blank" rel="noopener">LEO Mobile Panel Data | Github</a>
     </div>
   </div>
